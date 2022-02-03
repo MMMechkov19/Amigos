@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Register.h"
 namespace AmigosQuiz {
 
 	using namespace System;
@@ -356,6 +356,10 @@ namespace AmigosQuiz {
 		if (textBox2->Text == "") {
 			textBox2->Text = "Password";
 		}
+		this->Hide();
+		AmigosQuiz::Register reg;
+		reg.ShowDialog();
+		this->Show();		
 	}
 };
 }
