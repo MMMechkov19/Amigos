@@ -416,7 +416,7 @@ namespace AmigosQuiz {
 			this->button3->FlatAppearance->BorderSize = 0;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->button3->Location = System::Drawing::Point(53, 391);
+			this->button3->Location = System::Drawing::Point(54, 407);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(410, 48);
 			this->button3->TabIndex = 10;
@@ -431,7 +431,7 @@ namespace AmigosQuiz {
 			this->checkBox2->Checked = true;
 			this->checkBox2->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->checkBox2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->checkBox2->Location = System::Drawing::Point(169, 368);
+			this->checkBox2->Location = System::Drawing::Point(169, 374);
 			this->checkBox2->Name = L"checkBox2";
 			this->checkBox2->Size = System::Drawing::Size(192, 17);
 			this->checkBox2->TabIndex = 9;
@@ -530,6 +530,7 @@ namespace AmigosQuiz {
 			this->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Name = L"Register";
 			this->Text = L"Register";
+			this->Load += gcnew System::EventHandler(this, &Register::Register_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->panel3->ResumeLayout(false);
@@ -652,6 +653,9 @@ namespace AmigosQuiz {
 			textBox3->Text = "Password";
 		}
 		this->Hide();
+	}
+	private: System::Void Register_Load(System::Object^ sender, System::EventArgs^ e) {
+
 	}
 };
 }
