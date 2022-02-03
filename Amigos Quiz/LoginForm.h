@@ -1,5 +1,6 @@
 #pragma once
 #include "Register.h"
+
 namespace AmigosQuiz {
 
 	using namespace System;
@@ -42,7 +43,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::Label^ label4;
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::CheckBox^ checkBox1;
 	private: System::Windows::Forms::Panel^ panel5;
@@ -76,7 +77,6 @@ namespace AmigosQuiz {
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
@@ -112,6 +112,7 @@ namespace AmigosQuiz {
 			// 
 			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
 				static_cast<System::Int32>(static_cast<System::Byte>(100)));
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Location = System::Drawing::Point(91, 356);
@@ -170,7 +171,6 @@ namespace AmigosQuiz {
 			// panel3
 			// 
 			this->panel3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel3.BackgroundImage")));
-			this->panel3->Controls->Add(this->label4);
 			this->panel3->Controls->Add(this->button2);
 			this->panel3->Controls->Add(this->checkBox1);
 			this->panel3->Controls->Add(this->panel5);
@@ -183,24 +183,11 @@ namespace AmigosQuiz {
 			this->panel3->TabIndex = 1;
 			this->panel3->Click += gcnew System::EventHandler(this, &LoginForm::checkBox1_CheckedChanged);
 			// 
-			// label4
-			// 
-			this->label4->BackColor = System::Drawing::Color::Transparent;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.25F, System::Drawing::FontStyle::Underline));
-			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(110)));
-			this->label4->Location = System::Drawing::Point(166, 407);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(190, 28);
-			this->label4->TabIndex = 11;
-			this->label4->Text = L"Continue without signing in.";
-			this->label4->UseMnemonic = false;
-			this->label4->Click += gcnew System::EventHandler(this, &LoginForm::otherClick);
-			// 
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
 				static_cast<System::Int32>(static_cast<System::Byte>(100)));
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
@@ -218,6 +205,7 @@ namespace AmigosQuiz {
 			this->checkBox1->BackColor = System::Drawing::Color::Transparent;
 			this->checkBox1->Checked = true;
 			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->checkBox1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->checkBox1->Location = System::Drawing::Point(164, 320);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(192, 17);
