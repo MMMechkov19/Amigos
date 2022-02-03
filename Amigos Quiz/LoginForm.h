@@ -120,7 +120,7 @@ namespace AmigosQuiz {
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"Register";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &LoginForm::otherClick);
+			this->button1->Click += gcnew System::EventHandler(this, &LoginForm::button1_Click);
 			// 
 			// label1
 			// 
@@ -181,7 +181,7 @@ namespace AmigosQuiz {
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(532, 524);
 			this->panel3->TabIndex = 1;
-			this->panel3->Click += gcnew System::EventHandler(this, &LoginForm::otherClick);
+			this->panel3->Click += gcnew System::EventHandler(this, &LoginForm::checkBox1_CheckedChanged);
 			// 
 			// label4
 			// 
@@ -355,11 +355,19 @@ namespace AmigosQuiz {
 		}
 		if (textBox2->Text == "") {
 			textBox2->Text = "Password";
+		}		
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox1->Text == "") {
+			textBox1->Text = "Username";
+		}
+		if (textBox2->Text == "") {
+			textBox2->Text = "Password";
 		}
 		this->Hide();
 		AmigosQuiz::Register reg;
 		reg.ShowDialog();
-		this->Show();		
+		this->Show();
 	}
 };
 }
