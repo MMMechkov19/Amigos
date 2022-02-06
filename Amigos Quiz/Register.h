@@ -1,8 +1,9 @@
 #pragma once
-#include "LoginForm.h"
+//#include "LoginForm.h"
+
 
 namespace AmigosQuiz {
-
+	
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -422,7 +423,8 @@ namespace AmigosQuiz {
 			this->button3->TabIndex = 10;
 			this->button3->Text = L"Register";
 			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &Register::otherClick);
+			this->button3->Click += gcnew System::EventHandler(this, &Register::button3_Click);
+			//Ei sq shte se unm okeiiii
 			// 
 			// checkBox2
 			// 
@@ -654,6 +656,9 @@ namespace AmigosQuiz {
 		}
 		this->Hide();
 	}
+
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+
 	private: System::Void Register_Load(System::Object^ sender, System::EventArgs^ e) {
 
 	}

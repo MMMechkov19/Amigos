@@ -124,12 +124,16 @@
   <ItemGroup>
     <ClCompile Include="EventForm.cpp" />
     <ClCompile Include="LoginForm.cpp" />
+    <ClCompile Include="QuizQuestions.cpp" />
     <ClCompile Include="Register.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccountSystem.h" />
     <ClInclude Include="EventForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Quiz.h" />
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
