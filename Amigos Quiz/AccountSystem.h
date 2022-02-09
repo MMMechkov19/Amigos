@@ -15,7 +15,7 @@ struct ACCOUNT {
 	};
 
 	__declspec(selectany) ACCOUNT_LIST* accounts = new ACCOUNT_LIST;
-
+	__declspec(selectany) ACCOUNT currentAccount;
 	void addAccount(ACCOUNT);
 	bool isPassValid(std::string password);
 	bool isNameValid(std::string name);

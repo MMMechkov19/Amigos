@@ -11,7 +11,20 @@ System::Void AmigosQuiz::Register::button3_Click(System::Object^ sender, System:
 										marshal_as<std::string>(textBox3->Text),
 										marshal_as<std::string>(textBox4->Text) };
 
-		addAccount(newAcc);
+		if (!isNameValid(newAcc.firstName) && !isNameValid(newAcc.lastName)) {
+			//Error Message
+		}
+		else if (!isMailValid(newAcc.email)) {
+			//Error Message
+		}
+		else if (!isPassValid(newAcc.password)) {
+			//Error Message
+		}
+		else {
+			currentAccount = newAcc;
+			addAccount(newAcc);
+			//Continue to Form for Questions
+		}
 
 
 }
