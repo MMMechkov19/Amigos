@@ -19,7 +19,7 @@ bool isNameValid(std::string name) {
 }
 
 bool isPassValid(std::string password) {
-
+	if(password.size() > 6 && )
 }
 
 bool isMailValid(std::string email) {
@@ -45,6 +45,18 @@ bool isEmailStartsWith(std::string email) {
 
 		if (email[0] == i || email[0] == y) {
 			counter++;
+		}
+	}
+	return counter;
+}
+
+int counterUpperCase(std::string password) {
+	int counter = 0;
+	for (char i = 'A'; i <= 'Z'; i++) {
+		for (size_t y = 0; y < password.size(); y++) {
+			if (password[y] == i) {
+				counter++;
+			}
 		}
 	}
 	return counter;
