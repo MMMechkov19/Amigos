@@ -20,7 +20,9 @@ struct ACCOUNT {
 	bool isPassValid(std::string password);
 	bool isNameValid(std::string name);
 	bool isMailValid(std::string email);
-	int countSymbols(char symbol);
+	int countSymbols(char symbol, std::string word);
+	bool isEmailStartsWith(std::string email);
+	int counterUpperCase(std::string password);
 
 	//void DisplayQuestions(QUESTION_BANK*);
 
