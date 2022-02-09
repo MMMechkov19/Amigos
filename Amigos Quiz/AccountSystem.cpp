@@ -23,17 +23,27 @@ bool isPassValid(std::string password) {
 }
 
 /*bool isMailValid(std::string email) {
-	if (email.find("@") != string::npos && ) {
+	if (countSymbols('@', email) == 1 && countSymbols('\.', email) == 1 && isEmailStartsWith(email) == 1) {
 		return true;
 	}
 	return false;
-}
-*/
+}*/
 
 int countSymbols(char symbol, std::string word) {
 	int counter = 0;
 	for (size_t i = 0; i < word.size(); i++) {
 		if (word[i] == symbol) {
+			counter++;
+		}
+	}
+	return counter;
+}
+
+bool isEmailStartsWith(std::string email) {
+	int counter = 0;
+	for (char i = 'a', y = 'A'; i < 'z' && y < 'Z'; i++, y++) {
+
+		if (email[0] == i || email[0] == y) {
 			counter++;
 		}
 	}
