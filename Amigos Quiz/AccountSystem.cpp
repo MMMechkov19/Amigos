@@ -22,12 +22,12 @@ bool isPassValid(std::string password) {
 
 }
 
-/*bool isMailValid(std::string email) {
+bool isMailValid(std::string email) {
 	if (countSymbols('@', email) == 1 && countSymbols('\.', email) == 1 && isEmailStartsWith(email) == 1) {
 		return true;
 	}
 	return false;
-}*/
+}
 
 int countSymbols(char symbol, std::string word) {
 	int counter = 0;
