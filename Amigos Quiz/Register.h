@@ -379,7 +379,7 @@ namespace AmigosQuiz {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(176, 19);
 			this->textBox6->TabIndex = 8;
-			this->textBox6->Text = L"Phone Number";
+			this->textBox6->Text = L"Email Address";
 			this->textBox6->Click += gcnew System::EventHandler(this, &Register::textBox6_Click);
 			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Register::textBox6_TextChanged);
 			// 
@@ -579,7 +579,7 @@ namespace AmigosQuiz {
 			textBox5->Text = "Last Name";
 		}
 		if (textBox6->Text == "") {
-			textBox6->Text = "Phone Number";
+			textBox6->Text = "Email Address";
 		}
 		if (textBox3->Text == "") {
 			textBox3->Text = "Password";
@@ -596,11 +596,11 @@ namespace AmigosQuiz {
 			textBox4->Text = "First Name";
 		}
 		if (textBox6->Text == "") {
-			textBox6->Text = "Phone Number";
+			textBox6->Text = "Email Address";
 		}
 	}
 	private: System::Void textBox6_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox6->Text == "Phone Number") {
+		if (textBox6->Text == "Email Address") {
 			textBox6->Text = "";
 		}
 		if (textBox3->Text == "") {
@@ -624,7 +624,7 @@ namespace AmigosQuiz {
 			textBox5->Text = "Last Name";
 		}
 		if (textBox6->Text == "") {
-			textBox6->Text = "Phone Number";
+			textBox6->Text = "Email Address";
 		}
 	}
 	private: System::Void otherClick(System::Object^ sender, System::EventArgs^ e) {
@@ -635,7 +635,7 @@ namespace AmigosQuiz {
 			textBox5->Text = "Last Name";
 		}
 		if (textBox6->Text == "") {
-			textBox6->Text = "Phone Number";
+			textBox6->Text = "Email Address";
 		}
 		if (textBox3->Text == "") {
 			textBox3->Text = "Password";
@@ -649,7 +649,7 @@ namespace AmigosQuiz {
 			textBox5->Text = "Last Name";
 		}
 		if (textBox6->Text == "") {
-			textBox6->Text = "Phone Number";
+			textBox6->Text = "Email Address";
 		}
 		if (textBox3->Text == "") {
 			textBox3->Text = "Password";

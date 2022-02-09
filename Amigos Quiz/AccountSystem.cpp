@@ -13,9 +13,9 @@ void addAccount(ACCOUNT account)
 
 bool isNameValid(std::string name) {
 	if (name.size() < 2 || name.find_first_of("0123456789") != string::npos) {
-		return false;
+		return true;
 	}
-	return true;
+	return false;
 }
 
 bool isPassValid(std::string password) {
