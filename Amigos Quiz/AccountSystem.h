@@ -19,7 +19,8 @@ struct ACCOUNT {
 	void addAccount(ACCOUNT);
 	bool isPassValid(std::string password);
 	bool isNameValid(std::string name);
-	bool isEmailValid(std::string email);
+	bool isMailValid(std::string email);
+	int countSymbols(char symbol);
 
 	//void DisplayQuestions(QUESTION_BANK*);
 

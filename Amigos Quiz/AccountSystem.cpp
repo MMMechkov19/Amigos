@@ -18,3 +18,24 @@ bool isNameValid(std::string name) {
 	return true;
 }
 
+bool isPassValid(std::string password) {
+
+}
+
+/*bool isMailValid(std::string email) {
+	if (email.find("@") != string::npos && ) {
+		return true;
+	}
+	return false;
+}
+*/
+
+int countSymbols(char symbol, std::string word) {
+	int counter = 0;
+	for (size_t i = 0; i < word.size(); i++) {
+		if (word[i] == symbol) {
+			counter++;
+		}
+	}
+	return counter;
+}
