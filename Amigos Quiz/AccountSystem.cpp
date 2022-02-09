@@ -19,7 +19,10 @@ bool isNameValid(std::string name) {
 }
 
 bool isPassValid(std::string password) {
-	if(password.size() > 6 && )
+	if (password.size() > 6 && counterUpperCase(password) >= 1) {
+		return true;
+	}
+	return false;
 }
 
 bool isMailValid(std::string email) {
