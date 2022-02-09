@@ -126,7 +126,7 @@
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="QuizQuestions.cpp" />
     <ClCompile Include="Register.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="AccountSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountSystem.h" />

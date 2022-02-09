@@ -1,9 +1,7 @@
 #pragma once
 #include <iostream>
 
-namespace AccountSystem 
-{
-	 struct ACCOUNT {
+struct ACCOUNT {
 		int id;
 		std::string firstName;
 		std::string lastName;
@@ -18,7 +16,10 @@ namespace AccountSystem
 
 	__declspec(selectany) ACCOUNT_LIST* accounts = new ACCOUNT_LIST;
 
-	void AddAccount(ACCOUNT);
+	void addAccount(ACCOUNT);
+	bool isPassValid(std::string password);
+	bool isNameValid(std::string name);
+	bool isEmailValid(std::string email);
 
 	//void DisplayQuestions(QUESTION_BANK*);
 
@@ -40,5 +41,3 @@ namespace AccountSystem
 	//second->Question.Answers[3] = "4) Paisius History is an autobiographical work.";
 	//second->Question.RightAnswer = 3;
 	//second->next = NULL;
-
-}

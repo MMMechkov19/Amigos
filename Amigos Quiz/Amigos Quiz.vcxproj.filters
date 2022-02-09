@@ -27,7 +27,7 @@
     <ClCompile Include="QuizQuestions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="AccountSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
