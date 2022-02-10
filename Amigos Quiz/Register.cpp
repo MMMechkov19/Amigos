@@ -11,7 +11,7 @@ System::Void AmigosQuiz::Register::button3_Click(System::Object^ sender, System:
 									marshal_as<std::string>(textBox6->Text),
 									marshal_as<std::string>(textBox3->Text) };
 
-	if (isNameValid(newAcc.firstName) || isNameValid(newAcc.lastName)) {
+	if (!isNameValid(newAcc.firstName) || !isNameValid(newAcc.lastName)) {
 			//Error Message
 			label1->Text = "Invalid First or Last Name";
 		}

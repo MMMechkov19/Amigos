@@ -12,10 +12,11 @@ void addAccount(ACCOUNT account)
 }
 
 bool isNameValid(std::string name) {
-	if (name.size() < 2 || name.find_first_of("0123456789") != string::npos) {
-		return true;
+	if (name.size() < 2 || isNameContainsNumbers(name)) {
+
+		return false;
 	}
-	return false;
+	return true;
 }
 
 bool isPassValid(std::string password) {
@@ -58,6 +59,18 @@ int counterUpperCase(std::string password) {
 	for (char i = 'A'; i <= 'Z'; i++) {
 		for (size_t y = 0; y < password.size(); y++) {
 			if (password[y] == i) {
+				counter++;
+			}
+		}
+	}
+	return counter;
+}
+
+bool isNameContainsNumbers(std::string name) {
+	int counter = 0;
+	for (char i = '0'; i <= '9'; i++) {
+		for (size_t y = 0; y < name.size(); y++) {
+			if (name[y] == i) {
 				counter++;
 			}
 		}

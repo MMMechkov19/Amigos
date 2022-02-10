@@ -23,6 +23,7 @@ struct ACCOUNT {
 	int countSymbols(char symbol, std::string word);
 	bool isEmailStartsWith(std::string email);
 	int counterUpperCase(std::string password);
+	bool isNameContainsNumbers(std::string name);
 
 	//void DisplayQuestions(QUESTION_BANK*);
 
