@@ -1,6 +1,6 @@
 <p align="center">
   <a href=" rel="noopener">
-    <img src="Images/Amigos logo.png" alt="Logo" width="800">
+    <img src="Images/logo2.jpg" alt="Logo" width="900">
   </a>
 </p>
 
