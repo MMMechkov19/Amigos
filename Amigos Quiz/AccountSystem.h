@@ -11,7 +11,7 @@ struct ACCOUNT {
 
 	struct ACCOUNT_LIST {
 		ACCOUNT account;
-		struct ACCOUNT_LIST* next;
+		struct ACCOUNT_LIST* next = NULL;
 	};
 
 	__declspec(selectany) ACCOUNT_LIST* accounts = new ACCOUNT_LIST;
@@ -24,7 +24,8 @@ struct ACCOUNT {
 	bool isEmailStartsWith(std::string email);
 	int counterUpperCase(std::string password);
 	bool isNameContainsNumbers(std::string name);
-
+	ACCOUNT searchAccount(std::string email, std::string password);
+	void initialiseAccounts();
 	//void DisplayQuestions(QUESTION_BANK*);
 
 	//QUESTION_BANK* head = new QUESTION_BANK;

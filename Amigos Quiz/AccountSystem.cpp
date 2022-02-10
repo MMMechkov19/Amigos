@@ -77,3 +77,13 @@ bool isNameContainsNumbers(std::string name) {
 	}
 	return counter;
 }
+
+ACCOUNT searchAccount(std::string email, std::string password){
+	ACCOUNT_LIST* temp = accounts;
+	while (temp != NULL) {
+		if (temp->account.email == email && temp->account.password == password) return temp->account;
+		temp = temp->next;
+	}
+	ACCOUNT NotFound = { 0, "Not", "Found", "For", "Real" };
+	return NotFound;
+}
