@@ -12,10 +12,11 @@ void addAccount(ACCOUNT account)
 }
 
 bool isNameValid(std::string name) {
-	if (name.size() < 2 || name.find_first_of("0123456789") != string::npos) {
-		return true;
+	if (name.size() < 2 || isNameContainsNumbers(name)) {
+
+		return false;
 	}
-	return false;
+	return true;
 }
 
 bool isPassValid(std::string password) {
@@ -63,4 +64,39 @@ int counterUpperCase(std::string password) {
 		}
 	}
 	return counter;
+}
+
+bool isNameContainsNumbers(std::string name) {
+	int counter = 0;
+	for (char i = '0'; i <= '9'; i++) {
+		for (size_t y = 0; y < name.size(); y++) {
+			if (name[y] == i) {
+				counter++;
+			}
+		}
+	}
+	return counter;
+}
+
+ACCOUNT searchAccount(std::string email, std::string password){
+	ACCOUNT_LIST* temp = accounts;
+	while (temp != NULL) {
+		if (temp->account.email == email && temp->account.password == password) return temp->account;
+		temp = temp->next;
+	}
+	ACCOUNT NotFound = { 0, "Not", "Found", "For", "Real" };
+	return NotFound;
+}
+
+void initialiseAccounts() {
+	addAccount({ 1, "Martin", "Martinov", "mvmartinov19@codingburgas.bg", "Panda1234" });
+	addAccount({ 2, "Petur", "Petrov", "ppetrov19@codingburgas.bg", "Panda1234" });
+	addAccount({ 3, "Ilko", "Iliev", "idiliev18@codingburgas.bg", "Panda1234" });
+	addAccount({ 4, "Martin", "Mechkov", "mmmechkov19@codingburgas.bg", "Panda1234" });
+	addAccount({ 5, "Cvetelina", "Yaneva", "ccyaneva@codingburgas.bg", "Panda1234" });
+	addAccount({ 6, "Galena", "Haka", "gghaka@codingburgas.bg", "Panda1234" });
+	addAccount({ 7, "Azis", "Georgiev", "azisgeorgiev@codingburgas.bg", "Panda1234" });
+	addAccount({ 8, "Mitko", "Paynera", "mitkopaynera@codingburgas.bg", "Panda1234" });
+	addAccount({ 9, "Tommy", "Innit", "tommyinnit@codingburgas.bg", "Panda1234" });
+	addAccount({ 10, "Tubbo", "Smith", "tubbosmith@codingburgas.bg", "Panda1234" });
 }

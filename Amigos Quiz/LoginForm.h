@@ -1,8 +1,11 @@
 #pragma once
 #include "Register.h"
+#include <msclr\marshal_cppstd.h>
+#include "AccountSystem.h"
 
 namespace AmigosQuiz {
 
+	using namespace msclr::interop;
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -198,6 +201,7 @@ namespace AmigosQuiz {
 			this->button2->Text = L"Sign in";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &LoginForm::otherClick);
+			this->button2->Click += gcnew System::EventHandler(this, &LoginForm::button2_Click);
 			// 
 			// checkBox1
 			// 
@@ -261,7 +265,7 @@ namespace AmigosQuiz {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(368, 19);
 			this->textBox1->TabIndex = 8;
-			this->textBox1->Text = L"Username";
+			this->textBox1->Text = L"Email Address";
 			this->textBox1->Click += gcnew System::EventHandler(this, &LoginForm::textBox1_Click);
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &LoginForm::textBox1_TextChanged);
 			// 
@@ -322,7 +326,7 @@ namespace AmigosQuiz {
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void textBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text == "Username") {
+		if (textBox1->Text == "Email Address") {
 			textBox1->Text = "";
 		}
 		if (textBox2->Text == "") {
@@ -334,12 +338,12 @@ namespace AmigosQuiz {
 			textBox2->Text = "";
 		}
 		if (textBox1->Text == "") {
-			textBox1->Text = "Username";
+			textBox1->Text = "Email Address";
 		}
 	}
 	private: System::Void otherClick(System::Object^ sender, System::EventArgs^ e) {
 		if (textBox1->Text == "") {
-			textBox1->Text = "Username";
+			textBox1->Text = "Email Address";
 		}
 		if (textBox2->Text == "") {
 			textBox2->Text = "Password";
@@ -347,7 +351,7 @@ namespace AmigosQuiz {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (textBox1->Text == "") {
-			textBox1->Text = "Username";
+			textBox1->Text = "Email Address";
 		}
 		if (textBox2->Text == "") {
 			textBox2->Text = "Password";
@@ -356,6 +360,17 @@ namespace AmigosQuiz {
 		AmigosQuiz::Register reg;
 		reg.ShowDialog();
 		this->Show();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+			std::string email = marshal_as<std::string>(textBox1->Text->ToLower());
+			std::string password = marshal_as<std::string>(textBox2->Text);
+			currentAccount = searchAccount(email, password);
+			if (currentAccount.id == 0) {
+				label1->Text = "Not Found Account Sorry";
+			}
+			else {
+				label1->Text = "Found Account YAY";
+			}
 	}
 };
 }
