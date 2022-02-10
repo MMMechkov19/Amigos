@@ -362,7 +362,7 @@ namespace AmigosQuiz {
 		this->Show();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-			std::string email = marshal_as<std::string>(textBox1->Text);
+			std::string email = marshal_as<std::string>(textBox1->Text->ToLower());
 			std::string password = marshal_as<std::string>(textBox2->Text);
 			currentAccount = searchAccount(email, password);
 			if (currentAccount.id == 0) {
