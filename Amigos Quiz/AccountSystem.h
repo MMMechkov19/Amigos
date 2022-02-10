@@ -9,7 +9,7 @@ struct ACCOUNT {
 		std::string password;
 	};
 
-	struct ACCOUNT_LIST {
+struct ACCOUNT_LIST {
 		ACCOUNT account;
 		struct ACCOUNT_LIST* next = NULL;
 	};
@@ -26,6 +26,7 @@ struct ACCOUNT {
 	bool isNameContainsNumbers(std::string name);
 	ACCOUNT searchAccount(std::string email, std::string password);
 	void initialiseAccounts();
+	__declspec(selectany) int lastid = 10;
 	//void DisplayQuestions(QUESTION_BANK*);
 
 	//QUESTION_BANK* head = new QUESTION_BANK;

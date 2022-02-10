@@ -369,7 +369,7 @@ namespace AmigosQuiz {
 				label1->Text = "Not Found Account Sorry";
 			}
 			else {
-				label1->Text = "Found Account YEY";
+				label1->Text = "Found Account YAY";
 			}
 	}
 };

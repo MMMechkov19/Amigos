@@ -5,7 +5,7 @@ using namespace msclr::interop;
 
 System::Void AmigosQuiz::Register::button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	ACCOUNT newAcc = { 1,
+	ACCOUNT newAcc = { lastid++,
 									marshal_as<std::string>(textBox4->Text),
 									marshal_as<std::string>(textBox5->Text),
 									marshal_as<std::string>(textBox6->Text),
