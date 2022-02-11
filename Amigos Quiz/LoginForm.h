@@ -366,10 +366,10 @@ namespace AmigosQuiz {
 			std::string password = marshal_as<std::string>(textBox2->Text);
 			currentAccount = searchAccount(email, password);
 			if (currentAccount.id == 0) {
-				label1->Text = "Not Found Account Sorry";
+				MessageBox::Show("Not Found Account Sorry");
 			}
 			else {
-				label1->Text = "Found Account YAY";
+				MessageBox::Show("Found Account");
 			}
 	}
 };

@@ -59,6 +59,12 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Panel^ panel9;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label8;
 
 
 	private:
@@ -76,17 +82,10 @@ namespace AmigosQuiz {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EventForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
-			this->panel5 = (gcnew System::Windows::Forms::Panel());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -97,22 +96,41 @@ namespace AmigosQuiz {
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
-			this->panel5->SuspendLayout();
-			this->panel4->SuspendLayout();
 			this->panel6->SuspendLayout();
 			this->panel7->SuspendLayout();
 			this->panel8->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->panel5->SuspendLayout();
+			this->panel4->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
 			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
+			this->panel1->Controls->Add(this->label12);
+			this->panel1->Controls->Add(this->label11);
+			this->panel1->Controls->Add(this->label10);
+			this->panel1->Controls->Add(this->label9);
+			this->panel1->Controls->Add(this->label8);
+			this->panel1->Controls->Add(this->label7);
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
@@ -120,6 +138,28 @@ namespace AmigosQuiz {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(347, 550);
 			this->panel1->TabIndex = 1;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
+			this->label7->Location = System::Drawing::Point(63, 76);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(207, 20);
+			this->label7->TabIndex = 4;
+			this->label7->Text = L"Nqkuv text tuka vuvejdasht";
+			this->label7->Click += gcnew System::EventHandler(this, &EventForm::label7_Click);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(0, 0);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(69, 59);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 3;
+			this->pictureBox1->TabStop = false;
 			// 
 			// panel2
 			// 
@@ -145,117 +185,6 @@ namespace AmigosQuiz {
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(532, 524);
 			this->panel3->TabIndex = 2;
-			// 
-			// label4
-			// 
-			this->label4->BackColor = System::Drawing::Color::Transparent;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.25F, System::Drawing::FontStyle::Underline));
-			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(110)));
-			this->label4->Location = System::Drawing::Point(166, 407);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(190, 28);
-			this->label4->TabIndex = 11;
-			this->label4->Text = L"Continue without signing in.";
-			this->label4->UseMnemonic = false;
-			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
-				static_cast<System::Int32>(static_cast<System::Byte>(100)));
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->button2->Location = System::Drawing::Point(54, 356);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(410, 48);
-			this->button2->TabIndex = 10;
-			this->button2->Text = L"Sign in";
-			this->button2->UseVisualStyleBackColor = false;
-			// 
-			// checkBox1
-			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->BackColor = System::Drawing::Color::Transparent;
-			this->checkBox1->Checked = true;
-			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Location = System::Drawing::Point(164, 320);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(291, 24);
-			this->checkBox1->TabIndex = 9;
-			this->checkBox1->Text = L"I agree to the terms and conditions.";
-			this->checkBox1->UseVisualStyleBackColor = false;
-			// 
-			// panel5
-			// 
-			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
-			this->panel5->Controls->Add(this->textBox2);
-			this->panel5->Location = System::Drawing::Point(55, 241);
-			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(409, 59);
-			this->panel5->TabIndex = 8;
-			// 
-			// textBox2
-			// 
-			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox2->ForeColor = System::Drawing::Color::Transparent;
-			this->textBox2->Location = System::Drawing::Point(18, 21);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(368, 19);
-			this->textBox2->TabIndex = 8;
-			this->textBox2->Text = L"Password";
-			this->textBox2->UseSystemPasswordChar = true;
-			// 
-			// panel4
-			// 
-			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
-			this->panel4->Controls->Add(this->textBox1);
-			this->panel4->Location = System::Drawing::Point(54, 161);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(409, 59);
-			this->panel4->TabIndex = 7;
-			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox1->ForeColor = System::Drawing::Color::Transparent;
-			this->textBox1->Location = System::Drawing::Point(19, 20);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(368, 19);
-			this->textBox1->TabIndex = 8;
-			this->textBox1->Text = L"Username";
-			// 
-			// label3
-			// 
-			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.25F));
-			this->label3->ForeColor = System::Drawing::Color::Transparent;
-			this->label3->Location = System::Drawing::Point(51, 112);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(378, 39);
-			this->label3->TabIndex = 6;
-			this->label3->Text = L"Sign in to your account so that we can import settings and preferences and adjust"
-				L" your experience";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 33, System::Drawing::FontStyle::Bold));
-			this->label2->ForeColor = System::Drawing::Color::Transparent;
-			this->label2->Location = System::Drawing::Point(46, 47);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(163, 52);
-			this->label2->TabIndex = 5;
-			this->label2->Text = L"Sign in";
 			// 
 			// panel6
 			// 
@@ -383,6 +312,117 @@ namespace AmigosQuiz {
 			this->label6->TabIndex = 5;
 			this->label6->Text = L"Sign in";
 			// 
+			// label4
+			// 
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.25F, System::Drawing::FontStyle::Underline));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(110)));
+			this->label4->Location = System::Drawing::Point(166, 407);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(190, 28);
+			this->label4->TabIndex = 11;
+			this->label4->Text = L"Continue without signing in.";
+			this->label4->UseMnemonic = false;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
+				static_cast<System::Int32>(static_cast<System::Byte>(100)));
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->button2->Location = System::Drawing::Point(54, 356);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(410, 48);
+			this->button2->TabIndex = 10;
+			this->button2->Text = L"Sign in";
+			this->button2->UseVisualStyleBackColor = false;
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->BackColor = System::Drawing::Color::Transparent;
+			this->checkBox1->Checked = true;
+			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->checkBox1->Location = System::Drawing::Point(164, 320);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(291, 24);
+			this->checkBox1->TabIndex = 9;
+			this->checkBox1->Text = L"I agree to the terms and conditions.";
+			this->checkBox1->UseVisualStyleBackColor = false;
+			// 
+			// panel5
+			// 
+			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->panel5->Controls->Add(this->textBox2);
+			this->panel5->Location = System::Drawing::Point(55, 241);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(409, 59);
+			this->panel5->TabIndex = 8;
+			// 
+			// textBox2
+			// 
+			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox2->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox2->Location = System::Drawing::Point(18, 21);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(368, 19);
+			this->textBox2->TabIndex = 8;
+			this->textBox2->Text = L"Password";
+			this->textBox2->UseSystemPasswordChar = true;
+			// 
+			// panel4
+			// 
+			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->panel4->Controls->Add(this->textBox1);
+			this->panel4->Location = System::Drawing::Point(54, 161);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(409, 59);
+			this->panel4->TabIndex = 7;
+			// 
+			// textBox1
+			// 
+			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox1->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox1->Location = System::Drawing::Point(19, 20);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(368, 19);
+			this->textBox1->TabIndex = 8;
+			this->textBox1->Text = L"Username";
+			// 
+			// label3
+			// 
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.25F));
+			this->label3->ForeColor = System::Drawing::Color::Transparent;
+			this->label3->Location = System::Drawing::Point(51, 112);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(378, 39);
+			this->label3->TabIndex = 6;
+			this->label3->Text = L"Sign in to your account so that we can import settings and preferences and adjust"
+				L" your experience";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 33, System::Drawing::FontStyle::Bold));
+			this->label2->ForeColor = System::Drawing::Color::Transparent;
+			this->label2->Location = System::Drawing::Point(46, 47);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(163, 52);
+			this->label2->TabIndex = 5;
+			this->label2->Text = L"Sign in";
+			// 
 			// panel9
 			// 
 			this->panel9->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel9.BackgroundImage")));
@@ -391,41 +431,81 @@ namespace AmigosQuiz {
 			this->panel9->Size = System::Drawing::Size(532, 524);
 			this->panel9->TabIndex = 2;
 			// 
-			// pictureBox1
+			// label8
 			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(69, 59);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 3;
-			this->pictureBox1->TabStop = false;
+			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
+			this->label8->Location = System::Drawing::Point(31, 161);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(45, 20);
+			this->label8->TabIndex = 5;
+			this->label8->Text = L"text1";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
+			this->label9->Location = System::Drawing::Point(31, 295);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(45, 20);
+			this->label9->TabIndex = 6;
+			this->label9->Text = L"text2";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->BackColor = System::Drawing::Color::Transparent;
+			this->label10->Location = System::Drawing::Point(31, 214);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(49, 20);
+			this->label10->TabIndex = 7;
+			this->label10->Text = L"quiz1";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->BackColor = System::Drawing::Color::Transparent;
+			this->label11->Location = System::Drawing::Point(31, 356);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(49, 20);
+			this->label11->TabIndex = 8;
+			this->label11->Text = L"quiz2";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->BackColor = System::Drawing::Color::Transparent;
+			this->label12->Location = System::Drawing::Point(273, 23);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(58, 20);
+			this->label12->TabIndex = 9;
+			this->label12->Text = L"akaunt";
 			// 
 			// EventForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(872, 526);
+			this->ClientSize = System::Drawing::Size(343, 526);
 			this->Controls->Add(this->panel9);
 			this->Controls->Add(this->panel1);
 			this->Name = L"EventForm";
 			this->Text = L"EventForm";
 			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel2->ResumeLayout(false);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
-			this->panel5->ResumeLayout(false);
-			this->panel5->PerformLayout();
-			this->panel4->ResumeLayout(false);
-			this->panel4->PerformLayout();
 			this->panel6->ResumeLayout(false);
 			this->panel6->PerformLayout();
 			this->panel7->ResumeLayout(false);
 			this->panel7->PerformLayout();
 			this->panel8->ResumeLayout(false);
 			this->panel8->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->panel5->ResumeLayout(false);
+			this->panel5->PerformLayout();
+			this->panel4->ResumeLayout(false);
+			this->panel4->PerformLayout();
 			this->ResumeLayout(false);
 
 		}

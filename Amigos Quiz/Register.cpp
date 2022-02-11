@@ -13,15 +13,15 @@ System::Void AmigosQuiz::Register::button3_Click(System::Object^ sender, System:
 
 	if (!isNameValid(newAcc.firstName) || !isNameValid(newAcc.lastName)) {
 			//Error Message
-			label1->Text = "Invalid First or Last Name";
+			MessageBox::Show("Invalid First or Last Name");
 		}
 		else if (!isMailValid(newAcc.email)) {
 			//Error Message
-			label1->Text = "Invalid Email";
+			MessageBox::Show ("Invalid Email");
 		}
 		else if (!isPassValid(newAcc.password)) {
 			//Error Message
-			label1->Text = "Invalid Password";
+			MessageBox::Show("Incorrect Password Format");
 		}
 		else {
 			currentAccount = newAcc;
