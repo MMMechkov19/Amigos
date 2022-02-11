@@ -1,4 +1,6 @@
 #pragma once
+#include "AccountSystem.h"
+#include <iostream>
 
 namespace AmigosQuiz {
 
@@ -29,6 +31,7 @@ namespace AmigosQuiz {
 		/// </summary>
 		~EventForm()
 		{
+			Application::Exit();
 			if (components)
 			{
 				delete components;
@@ -82,6 +85,11 @@ namespace AmigosQuiz {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EventForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -106,11 +114,6 @@ namespace AmigosQuiz {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -138,6 +141,56 @@ namespace AmigosQuiz {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(347, 550);
 			this->panel1->TabIndex = 1;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->BackColor = System::Drawing::Color::Transparent;
+			this->label12->Location = System::Drawing::Point(194, 22);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(58, 20);
+			this->label12->TabIndex = 9;
+			this->label12->Text = L"akaunt";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->BackColor = System::Drawing::Color::Transparent;
+			this->label11->Location = System::Drawing::Point(31, 356);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(49, 20);
+			this->label11->TabIndex = 8;
+			this->label11->Text = L"quiz2";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->BackColor = System::Drawing::Color::Transparent;
+			this->label10->Location = System::Drawing::Point(31, 214);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(49, 20);
+			this->label10->TabIndex = 7;
+			this->label10->Text = L"quiz1";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
+			this->label9->Location = System::Drawing::Point(31, 295);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(45, 20);
+			this->label9->TabIndex = 6;
+			this->label9->Text = L"text2";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
+			this->label8->Location = System::Drawing::Point(31, 161);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(45, 20);
+			this->label8->TabIndex = 5;
+			this->label8->Text = L"text1";
 			// 
 			// label7
 			// 
@@ -430,56 +483,6 @@ namespace AmigosQuiz {
 			this->panel9->Size = System::Drawing::Size(532, 524);
 			this->panel9->TabIndex = 2;
 			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->BackColor = System::Drawing::Color::Transparent;
-			this->label8->Location = System::Drawing::Point(31, 161);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(45, 20);
-			this->label8->TabIndex = 5;
-			this->label8->Text = L"text1";
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->BackColor = System::Drawing::Color::Transparent;
-			this->label9->Location = System::Drawing::Point(31, 295);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(45, 20);
-			this->label9->TabIndex = 6;
-			this->label9->Text = L"text2";
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->BackColor = System::Drawing::Color::Transparent;
-			this->label10->Location = System::Drawing::Point(31, 214);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(49, 20);
-			this->label10->TabIndex = 7;
-			this->label10->Text = L"quiz1";
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->BackColor = System::Drawing::Color::Transparent;
-			this->label11->Location = System::Drawing::Point(31, 356);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(49, 20);
-			this->label11->TabIndex = 8;
-			this->label11->Text = L"quiz2";
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->BackColor = System::Drawing::Color::Transparent;
-			this->label12->Location = System::Drawing::Point(273, 23);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(58, 20);
-			this->label12->TabIndex = 9;
-			this->label12->Text = L"akaunt";
-			// 
 			// EventForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -489,6 +492,7 @@ namespace AmigosQuiz {
 			this->Controls->Add(this->panel1);
 			this->Name = L"EventForm";
 			this->Text = L"EventForm";
+			this->Load += gcnew System::EventHandler(this, &EventForm::EventForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -510,6 +514,11 @@ namespace AmigosQuiz {
 		}
 #pragma endregion
 	private: System::Void vScrollBar1_Scroll(System::Object^ sender, System::Windows::Forms::ScrollEventArgs^ e) {
+	}
+	private: System::Void EventForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		std::string name = currentAccount.firstName + " " + currentAccount.lastName;
+		String^ str2 = gcnew String(name.c_str());
+		label12->Text = str2;
 	}
 };
 }

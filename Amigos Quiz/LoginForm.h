@@ -223,7 +223,7 @@ namespace AmigosQuiz {
 			// panel5
 			// 
 			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			static_cast<System::Int32>(static_cast<System::Byte>(85)));
 			this->panel5->Controls->Add(this->textBox2);
 			this->panel5->Location = System::Drawing::Point(55, 241);
 			this->panel5->Name = L"panel5";
@@ -233,7 +233,7 @@ namespace AmigosQuiz {
 			// textBox2
 			// 
 			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			static_cast<System::Int32>(static_cast<System::Byte>(85)));
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->textBox2->ForeColor = System::Drawing::Color::Transparent;
@@ -248,7 +248,7 @@ namespace AmigosQuiz {
 			// panel4
 			// 
 			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			static_cast<System::Int32>(static_cast<System::Byte>(85)));
 			this->panel4->Controls->Add(this->textBox1);
 			this->panel4->Location = System::Drawing::Point(54, 161);
 			this->panel4->Name = L"panel4";
@@ -258,7 +258,7 @@ namespace AmigosQuiz {
 			// textBox1
 			// 
 			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(197)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			static_cast<System::Int32>(static_cast<System::Byte>(85)));
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->textBox1->ForeColor = System::Drawing::Color::Transparent;
