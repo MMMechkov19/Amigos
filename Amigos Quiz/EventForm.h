@@ -82,6 +82,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Panel^ panel10;
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Label^ label15;
 
 
 
@@ -135,8 +136,9 @@ namespace AmigosQuiz {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
-			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -557,6 +559,7 @@ namespace AmigosQuiz {
 			// panel10
 			// 
 			this->panel10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel10.BackgroundImage")));
+			this->panel10->Controls->Add(this->label15);
 			this->panel10->Controls->Add(this->label14);
 			this->panel10->Controls->Add(this->label13);
 			this->panel10->Location = System::Drawing::Point(346, 1);
@@ -564,29 +567,41 @@ namespace AmigosQuiz {
 			this->panel10->Size = System::Drawing::Size(396, 510);
 			this->panel10->TabIndex = 10;
 			// 
-			// label13
+			// label15
 			// 
-			this->label13->AutoSize = true;
-			this->label13->BackColor = System::Drawing::Color::Transparent;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label15->AutoSize = true;
+			this->label15->BackColor = System::Drawing::Color::Transparent;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Rockwell", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label13->Location = System::Drawing::Point(35, 43);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(52, 16);
-			this->label13->TabIndex = 0;
-			this->label13->Text = L"label13";
+			this->label15->Location = System::Drawing::Point(35, 356);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(50, 16);
+			this->label15->TabIndex = 2;
+			this->label15->Text = L"label15";
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
 			this->label14->BackColor = System::Drawing::Color::Transparent;
-			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label14->Font = (gcnew System::Drawing::Font(L"Rockwell", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label14->Location = System::Drawing::Point(35, 200);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(52, 16);
+			this->label14->Size = System::Drawing::Size(50, 16);
 			this->label14->TabIndex = 1;
 			this->label14->Text = L"label14";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->BackColor = System::Drawing::Color::Transparent;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Rockwell", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->Location = System::Drawing::Point(35, 43);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(50, 16);
+			this->label13->TabIndex = 0;
+			this->label13->Text = L"label13";
 			// 
 			// EventForm
 			// 
@@ -644,6 +659,11 @@ namespace AmigosQuiz {
 		std::string secondEventString = "     " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
 		String^ str2 = gcnew String(secondEventString.c_str());
 		label14->Text = str2;
+
+		EVENT thirdEvent = { 1014, "The Battle of Kleidion", "The Battle of Kleidion of 29 July 1014, in which Tsar \nSamuil of Bulgaria's forces were routed by Byzantine \nEmperor Basil II's army. After the battle, Basil ordered \nall 14,000 Bulgarian captives blinded, with a single \nsoldier left one-eyed to guide every 100 blinded home." };
+		std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
+		String^ str3 = gcnew String(thirdEventString.c_str());
+		label15->Text = str3;
 	}
 };
 }
