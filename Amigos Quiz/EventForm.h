@@ -176,63 +176,80 @@ namespace AmigosQuiz {
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->BackColor = System::Drawing::Color::Transparent;
-			this->label12->Location = System::Drawing::Point(199, 27);
+			this->label12->BackColor = System::Drawing::Color::DimGray;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Rockwell Condensed", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label12->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->label12->Location = System::Drawing::Point(220, 25);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(58, 20);
+			this->label12->Size = System::Drawing::Size(50, 22);
 			this->label12->TabIndex = 9;
 			this->label12->Text = L"akaunt";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->BackColor = System::Drawing::Color::Transparent;
-			this->label11->Location = System::Drawing::Point(31, 356);
+			this->label11->BackColor = System::Drawing::Color::Gainsboro;
+			this->label11->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->Location = System::Drawing::Point(26, 353);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(49, 20);
+			this->label11->Size = System::Drawing::Size(263, 19);
 			this->label11->TabIndex = 8;
-			this->label11->Text = L"quiz2";
+			this->label11->Text = L"Second Bulgarian Kingdom Test";
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->BackColor = System::Drawing::Color::Transparent;
-			this->label10->Location = System::Drawing::Point(31, 221);
+			this->label10->BackColor = System::Drawing::Color::Gainsboro;
+			this->label10->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->Location = System::Drawing::Point(26, 229);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(49, 20);
+			this->label10->Size = System::Drawing::Size(244, 19);
 			this->label10->TabIndex = 7;
-			this->label10->Text = L"quiz1";
+			this->label10->Text = L"First Bulgarian Kingdom Test";
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
 			this->label9->BackColor = System::Drawing::Color::Transparent;
-			this->label9->Location = System::Drawing::Point(31, 295);
+			this->label9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(22, 308);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(45, 20);
+			this->label9->Size = System::Drawing::Size(283, 19);
 			this->label9->TabIndex = 6;
-			this->label9->Text = L"text2";
+			this->label9->Text = L"Second Bulgarian Kingdom Lesson";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::Transparent;
-			this->label8->Location = System::Drawing::Point(31, 161);
+			this->label8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(22, 185);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(45, 20);
+			this->label8->Size = System::Drawing::Size(264, 19);
 			this->label8->TabIndex = 5;
-			this->label8->Text = L"text1";
+			this->label8->Text = L"First Bulgarian Kingdom Lesson";
 			this->label8->Click += gcnew System::EventHandler(this, &EventForm::label8_Click);
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::Transparent;
-			this->label7->Location = System::Drawing::Point(63, 76);
+			this->label7->Font = (gcnew System::Drawing::Font(L"Rockwell", 24.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(79, 84);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(207, 20);
+			this->label7->Size = System::Drawing::Size(191, 41);
 			this->label7->TabIndex = 4;
-			this->label7->Text = L"Nqkuv text tuka vuvejdasht";
+			this->label7->Text = L"TIME LIST";
 			// 
 			// pictureBox1
 			// 
@@ -240,7 +257,7 @@ namespace AmigosQuiz {
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(69, 59);
+			this->pictureBox1->Size = System::Drawing::Size(82, 67);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 3;
 			this->pictureBox1->TabStop = false;
@@ -575,9 +592,8 @@ namespace AmigosQuiz {
 				static_cast<System::Byte>(0)));
 			this->label15->Location = System::Drawing::Point(35, 356);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(50, 16);
+			this->label15->Size = System::Drawing::Size(0, 16);
 			this->label15->TabIndex = 2;
-			this->label15->Text = L"label15";
 			// 
 			// label14
 			// 
@@ -587,9 +603,8 @@ namespace AmigosQuiz {
 				static_cast<System::Byte>(0)));
 			this->label14->Location = System::Drawing::Point(35, 200);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(50, 16);
+			this->label14->Size = System::Drawing::Size(0, 16);
 			this->label14->TabIndex = 1;
-			this->label14->Text = L"label14";
 			// 
 			// label13
 			// 
@@ -599,9 +614,8 @@ namespace AmigosQuiz {
 				static_cast<System::Byte>(0)));
 			this->label13->Location = System::Drawing::Point(35, 43);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(50, 16);
+			this->label13->Size = System::Drawing::Size(0, 16);
 			this->label13->TabIndex = 0;
-			this->label13->Text = L"label13";
 			// 
 			// EventForm
 			// 

@@ -93,7 +93,7 @@ void initialiseAccounts() {
 	addAccount({ 2, "Petur", "Petrov", "ppetrov19@codingburgas.bg", "Panda1234" });
 	addAccount({ 3, "Ilko", "Iliev", "idiliev18@codingburgas.bg", "Panda1234" });
 	addAccount({ 4, "Martin", "Mechkov", "mmmechkov19@codingburgas.bg", "Panda1234" });
-	addAccount({ 5, "Cvetelina", "Yaneva", "ccyaneva@codingburgas.bg", "Panda1234" });
+	addAccount({ 5, "Cveti", "Yaneva", "ccyaneva@codingburgas.bg", "Panda1234" });
 	addAccount({ 6, "Galena", "Haka", "gghaka@codingburgas.bg", "Panda1234" });
 	addAccount({ 7, "Azis", "Georgiev", "azisgeorgiev@codingburgas.bg", "Panda1234" });
 	addAccount({ 8, "Mitko", "Paynera", "mitkopaynera@codingburgas.bg", "Panda1234" });
