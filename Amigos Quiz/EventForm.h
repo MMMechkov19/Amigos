@@ -68,6 +68,12 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::PictureBox^ pictureBox5;
+	private: System::Windows::Forms::PictureBox^ pictureBox4;
+	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::Panel^ panel10;
+
 
 
 	private:
@@ -114,6 +120,11 @@ namespace AmigosQuiz {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -123,6 +134,11 @@ namespace AmigosQuiz {
 			this->panel8->SuspendLayout();
 			this->panel5->SuspendLayout();
 			this->panel4->SuspendLayout();
+			this->panel9->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -139,18 +155,19 @@ namespace AmigosQuiz {
 			this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->panel1->Location = System::Drawing::Point(0, 1);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(347, 550);
+			this->panel1->Size = System::Drawing::Size(347, 532);
 			this->panel1->TabIndex = 1;
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
 			this->label12->BackColor = System::Drawing::Color::Transparent;
-			this->label12->Location = System::Drawing::Point(194, 22);
+			this->label12->Location = System::Drawing::Point(199, 27);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(58, 20);
 			this->label12->TabIndex = 9;
 			this->label12->Text = L"akaunt";
+			this->label12->Click += gcnew System::EventHandler(this, &EventForm::label12_Click);
 			// 
 			// label11
 			// 
@@ -191,6 +208,7 @@ namespace AmigosQuiz {
 			this->label8->Size = System::Drawing::Size(45, 20);
 			this->label8->TabIndex = 5;
 			this->label8->Text = L"text1";
+			this->label8->Click += gcnew System::EventHandler(this, &EventForm::label8_Click);
 			// 
 			// label7
 			// 
@@ -225,6 +243,7 @@ namespace AmigosQuiz {
 			// panel3
 			// 
 			this->panel3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel3.BackgroundImage")));
+			this->panel3->Controls->Add(this->panel9);
 			this->panel3->Controls->Add(this->panel6);
 			this->panel3->Controls->Add(this->label4);
 			this->panel3->Controls->Add(this->button2);
@@ -478,17 +497,65 @@ namespace AmigosQuiz {
 			// panel9
 			// 
 			this->panel9->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel9.BackgroundImage")));
-			this->panel9->Location = System::Drawing::Point(346, 1);
+			this->panel9->Controls->Add(this->pictureBox5);
+			this->panel9->Controls->Add(this->pictureBox4);
+			this->panel9->Controls->Add(this->pictureBox3);
+			this->panel9->Controls->Add(this->pictureBox2);
+			this->panel9->Location = System::Drawing::Point(0, 0);
 			this->panel9->Name = L"panel9";
 			this->panel9->Size = System::Drawing::Size(532, 524);
 			this->panel9->TabIndex = 2;
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Location = System::Drawing::Point(214, 153);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(100, 50);
+			this->pictureBox2->TabIndex = 2;
+			this->pictureBox2->TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(0, 0);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(529, 529);
+			this->pictureBox3->TabIndex = 2;
+			this->pictureBox3->TabStop = false;
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
+			this->pictureBox4->Location = System::Drawing::Point(57, 153);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(526, 347);
+			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox4->TabIndex = 2;
+			this->pictureBox4->TabStop = false;
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(-15, 47);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(525, 345);
+			this->pictureBox5->TabIndex = 2;
+			this->pictureBox5->TabStop = false;
+			// 
+			// panel10
+			// 
+			this->panel10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel10.BackgroundImage")));
+			this->panel10->Location = System::Drawing::Point(346, 1);
+			this->panel10->Name = L"panel10";
+			this->panel10->Size = System::Drawing::Size(529, 506);
+			this->panel10->TabIndex = 10;
 			// 
 			// EventForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(343, 526);
-			this->Controls->Add(this->panel9);
+			this->ClientSize = System::Drawing::Size(738, 505);
+			this->Controls->Add(this->panel10);
 			this->Controls->Add(this->panel1);
 			this->Name = L"EventForm";
 			this->Text = L"EventForm";
@@ -509,6 +576,12 @@ namespace AmigosQuiz {
 			this->panel5->PerformLayout();
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
+			this->panel9->ResumeLayout(false);
+			this->panel9->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -519,6 +592,9 @@ namespace AmigosQuiz {
 		std::string name = currentAccount.firstName + " " + currentAccount.lastName;
 		String^ str2 = gcnew String(name.c_str());
 		label12->Text = str2;
+	}
+	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	}
 };
 }

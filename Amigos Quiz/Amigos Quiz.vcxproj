@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EventForm.cpp" />
+    <ClCompile Include="Lesson.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="QuizQuestions.cpp" />
     <ClCompile Include="Register.cpp" />
@@ -131,6 +132,9 @@
   <ItemGroup>
     <ClInclude Include="AccountSystem.h" />
     <ClInclude Include="EventForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Lesson.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Quiz.h" />
@@ -144,6 +148,9 @@
   <ItemGroup>
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesson.resx">
+      <DependentUpon>Lesson.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
