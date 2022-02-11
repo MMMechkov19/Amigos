@@ -2,6 +2,7 @@
 #include "Register.h"
 #include <msclr\marshal_cppstd.h>
 #include "AccountSystem.h"
+#include "EventForm.h"
 
 namespace AmigosQuiz {
 
@@ -369,7 +370,10 @@ namespace AmigosQuiz {
 				MessageBox::Show("Not Found Account Sorry");
 			}
 			else {
-				MessageBox::Show("Found Account");
+				this->Hide();
+				AmigosQuiz::EventForm ev;
+				ev.ShowDialog();
+				this->Show();
 			}
 	}
 };

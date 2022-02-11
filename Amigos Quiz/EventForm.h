@@ -148,7 +148,6 @@ namespace AmigosQuiz {
 			this->label7->Size = System::Drawing::Size(207, 20);
 			this->label7->TabIndex = 4;
 			this->label7->Text = L"Nqkuv text tuka vuvejdasht";
-			this->label7->Click += gcnew System::EventHandler(this, &EventForm::label7_Click);
 			// 
 			// pictureBox1
 			// 

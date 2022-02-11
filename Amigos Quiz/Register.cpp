@@ -1,5 +1,6 @@
 #include "AccountSystem.h"
 #include "Register.h"
+#include "EventForm.h"
 #include <msclr\marshal_cppstd.h>
 using namespace msclr::interop;
 
@@ -26,7 +27,10 @@ System::Void AmigosQuiz::Register::button3_Click(System::Object^ sender, System:
 		else {
 			currentAccount = newAcc;
 			addAccount(newAcc);
-			//Continue to Form for Questions
+			this->Hide();
+			AmigosQuiz::EventForm ev;
+			ev.ShowDialog();
+			this->Show();
 		}
 
 
