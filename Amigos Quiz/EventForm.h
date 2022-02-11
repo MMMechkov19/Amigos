@@ -81,6 +81,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Panel^ panel10;
 	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::Label^ label14;
 
 
 
@@ -135,6 +136,7 @@ namespace AmigosQuiz {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -193,7 +195,7 @@ namespace AmigosQuiz {
 			// 
 			this->label10->AutoSize = true;
 			this->label10->BackColor = System::Drawing::Color::Transparent;
-			this->label10->Location = System::Drawing::Point(31, 214);
+			this->label10->Location = System::Drawing::Point(31, 221);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(49, 20);
 			this->label10->TabIndex = 7;
@@ -555,10 +557,11 @@ namespace AmigosQuiz {
 			// panel10
 			// 
 			this->panel10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel10.BackgroundImage")));
+			this->panel10->Controls->Add(this->label14);
 			this->panel10->Controls->Add(this->label13);
 			this->panel10->Location = System::Drawing::Point(346, 1);
 			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(397, 506);
+			this->panel10->Size = System::Drawing::Size(396, 510);
 			this->panel10->TabIndex = 10;
 			// 
 			// label13
@@ -567,11 +570,23 @@ namespace AmigosQuiz {
 			this->label13->BackColor = System::Drawing::Color::Transparent;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label13->Location = System::Drawing::Point(32, 41);
+			this->label13->Location = System::Drawing::Point(35, 43);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(52, 16);
 			this->label13->TabIndex = 0;
 			this->label13->Text = L"label13";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->BackColor = System::Drawing::Color::Transparent;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label14->Location = System::Drawing::Point(35, 200);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(52, 16);
+			this->label14->TabIndex = 1;
+			this->label14->Text = L"label14";
 			// 
 			// EventForm
 			// 
@@ -619,10 +634,16 @@ namespace AmigosQuiz {
 		label12->Text = str2;
 	}
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-		EVENT var = { 811, "The battle of the Varbishki Pass", "The famous Battle of Pliska was fought in the pass on \nJuly 26, 811 between the armies of Bulgarian Empire \nled by Khan Krum and the Byzantine Empire under \nNicephorus I which ended with a decisive Bulgarian \nvictory and the death of the Byzantine Emperor." };
-		std::string purvo = "     " + std::to_string(var.year) + "          " + var.name + "\n\n" + var.description;
-		String^ str3 = gcnew String(purvo.c_str());
-		label13->Text = str3;
+		EVENT firstEvent = { 811, "The battle of the Varbishki Pass", "The famous Battle of Pliska was fought in the pass on \nJuly 26, 811 between the armies of Bulgarian Empire \nled by Khan Krum and the Byzantine Empire under \nNicephorus I which ended with a decisive Bulgarian \nvictory and the death of the Byzantine Emperor." };
+		std::string firstEventString = "     " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
+		String^ str1 = gcnew String(firstEventString.c_str());
+		label13->Text = str1;
+
+
+		EVENT secondEvent = { 986, "The Battle of Trajan's Gate", "It is a historic mountain pass near Ihtiman, Bulgaria. \nThe pass was called Succi. Later it was named after \nRoman Emperor Trajan, on whose order a fortress \nby the name of Stipon was constructed on the hill over \nthe pass, between Thrace and Macedonia." };
+		std::string secondEventString = "     " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
+		String^ str2 = gcnew String(secondEventString.c_str());
+		label14->Text = str2;
 	}
 };
 }
