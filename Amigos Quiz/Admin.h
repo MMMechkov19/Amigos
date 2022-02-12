@@ -12,3 +12,8 @@ struct EVENT_LIST {
 	struct EVENT_LIST* next = NULL;
 };
 
+__declspec(selectany) EVENT_LIST* events = new EVENT_LIST;
+void addEvent(EVENT);
+EVENT_LIST* getFirstKingdomEvents();
+EVENT_LIST* getSecondKingdomEvents();
+void initialiseEvents();

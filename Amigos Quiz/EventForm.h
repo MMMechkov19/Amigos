@@ -44,6 +44,8 @@ namespace AmigosQuiz {
 				delete components;
 			}
 		}
+	private: System::Boolean isAdmin = false;
+
 	private: System::Windows::Forms::Panel^ panel1;
 	protected:
 	private: System::Windows::Forms::Panel^ panel2;
@@ -87,6 +89,15 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::TextBox^ textBox11;
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::TextBox^ textBox8;
+	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ textBox13;
+	private: System::Windows::Forms::TextBox^ textBox12;
 
 
 
@@ -107,6 +118,7 @@ namespace AmigosQuiz {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EventForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
@@ -141,13 +153,21 @@ namespace AmigosQuiz {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
+			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -182,6 +202,24 @@ namespace AmigosQuiz {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(347, 532);
 			this->panel1->TabIndex = 1;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
+				static_cast<System::Int32>(static_cast<System::Byte>(100)));
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Rockwell", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->button3->Location = System::Drawing::Point(100, 422);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(123, 36);
+			this->button3->TabIndex = 10;
+			this->button3->Text = L"Admin";
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &EventForm::button3_Click);
 			// 
 			// label12
 			// 
@@ -587,6 +625,15 @@ namespace AmigosQuiz {
 			// panel10
 			// 
 			this->panel10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel10.BackgroundImage")));
+			this->panel10->Controls->Add(this->textBox13);
+			this->panel10->Controls->Add(this->textBox12);
+			this->panel10->Controls->Add(this->textBox11);
+			this->panel10->Controls->Add(this->textBox10);
+			this->panel10->Controls->Add(this->textBox9);
+			this->panel10->Controls->Add(this->textBox8);
+			this->panel10->Controls->Add(this->textBox7);
+			this->panel10->Controls->Add(this->textBox6);
+			this->panel10->Controls->Add(this->textBox5);
 			this->panel10->Controls->Add(this->label18);
 			this->panel10->Controls->Add(this->label17);
 			this->panel10->Controls->Add(this->label16);
@@ -597,6 +644,114 @@ namespace AmigosQuiz {
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(396, 510);
 			this->panel10->TabIndex = 10;
+			// 
+			// textBox13
+			// 
+			this->textBox13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(215)),
+				static_cast<System::Int32>(static_cast<System::Byte>(166)));
+			this->textBox13->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox13->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox13->Location = System::Drawing::Point(33, 387);
+			this->textBox13->Multiline = true;
+			this->textBox13->Name = L"textBox13";
+			this->textBox13->Size = System::Drawing::Size(323, 85);
+			this->textBox13->TabIndex = 17;
+			// 
+			// textBox12
+			// 
+			this->textBox12->BackColor = System::Drawing::Color::White;
+			this->textBox12->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox12->ForeColor = System::Drawing::Color::Black;
+			this->textBox12->Location = System::Drawing::Point(106, 353);
+			this->textBox12->Name = L"textBox12";
+			this->textBox12->Size = System::Drawing::Size(250, 19);
+			this->textBox12->TabIndex = 16;
+			// 
+			// textBox11
+			// 
+			this->textBox11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(173)), static_cast<System::Int32>(static_cast<System::Byte>(173)),
+				static_cast<System::Int32>(static_cast<System::Byte>(165)));
+			this->textBox11->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox11->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox11->Location = System::Drawing::Point(33, 352);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(57, 19);
+			this->textBox11->TabIndex = 15;
+			// 
+			// textBox10
+			// 
+			this->textBox10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(215)),
+				static_cast<System::Int32>(static_cast<System::Byte>(166)));
+			this->textBox10->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox10->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox10->Location = System::Drawing::Point(33, 229);
+			this->textBox10->Multiline = true;
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(323, 85);
+			this->textBox10->TabIndex = 14;
+			// 
+			// textBox9
+			// 
+			this->textBox9->BackColor = System::Drawing::Color::White;
+			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox9->ForeColor = System::Drawing::Color::Black;
+			this->textBox9->Location = System::Drawing::Point(106, 198);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(250, 19);
+			this->textBox9->TabIndex = 13;
+			// 
+			// textBox8
+			// 
+			this->textBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(173)), static_cast<System::Int32>(static_cast<System::Byte>(173)),
+				static_cast<System::Int32>(static_cast<System::Byte>(165)));
+			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox8->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox8->Location = System::Drawing::Point(33, 198);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(57, 19);
+			this->textBox8->TabIndex = 12;
+			// 
+			// textBox7
+			// 
+			this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(215)),
+				static_cast<System::Int32>(static_cast<System::Byte>(166)));
+			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox7->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox7->Location = System::Drawing::Point(33, 73);
+			this->textBox7->Multiline = true;
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(323, 85);
+			this->textBox7->TabIndex = 11;
+			// 
+			// textBox6
+			// 
+			this->textBox6->BackColor = System::Drawing::Color::White;
+			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox6->ForeColor = System::Drawing::Color::Black;
+			this->textBox6->Location = System::Drawing::Point(106, 40);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(250, 19);
+			this->textBox6->TabIndex = 10;
+			// 
+			// textBox5
+			// 
+			this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(173)), static_cast<System::Int32>(static_cast<System::Byte>(173)),
+				static_cast<System::Int32>(static_cast<System::Byte>(165)));
+			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox5->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox5->Location = System::Drawing::Point(33, 40);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(57, 19);
+			this->textBox5->TabIndex = 9;
 			// 
 			// label18
 			// 
@@ -664,24 +819,6 @@ namespace AmigosQuiz {
 			this->label13->Size = System::Drawing::Size(0, 16);
 			this->label13->TabIndex = 0;
 			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
-				static_cast<System::Int32>(static_cast<System::Byte>(100)));
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Rockwell", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button3->Location = System::Drawing::Point(100, 422);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(123, 36);
-			this->button3->TabIndex = 10;
-			this->button3->Text = L"Admin";
-			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &EventForm::button3_Click);
-			// 
 			// EventForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -723,30 +860,53 @@ namespace AmigosQuiz {
 	private: System::Void vScrollBar1_Scroll(System::Object^ sender, System::Windows::Forms::ScrollEventArgs^ e) {
 	}
 	private: System::Void EventForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		textBox5->Hide();
+		textBox6->Hide();
+		textBox7->Hide();
+		textBox8->Hide();
+		textBox9->Hide();
+		textBox10->Hide();
+		textBox11->Hide();
+		textBox12->Hide();
+		textBox13->Hide();
+
 		std::string name = currentAccount.firstName + " " + currentAccount.lastName;
 		String^ str2 = gcnew String(name.c_str());
 		label12->Text = str2;
 	}
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-		EVENT firstEvent = { 811, "The battle of the Varbishki Pass", "The famous Battle of Pliska was fought in the pass on \nJuly 26, 811 between the armies of Bulgarian Empire \nled by Khan Krum and the Byzantine Empire under \nNicephorus I which ended with a decisive Bulgarian \nvictory and the death of the Byzantine Emperor." };
-		std::string firstEventString = "     " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
-		String^ str1 = gcnew String(firstEventString.c_str());
-		label13->Text = str1;
-		label13->Show();
+		if (isAdmin == false) {
+			EVENT firstEvent = { 811, "The battle of the Varbishki Pass", "The famous Battle of Pliska was fought in the pass on \nJuly 26, 811 between the armies of Bulgarian Empire \nled by Khan Krum and the Byzantine Empire under \nNicephorus I which ended with a decisive Bulgarian \nvictory and the death of the Byzantine Emperor." };
+			std::string firstEventString = "     " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
+			String^ str1 = gcnew String(firstEventString.c_str());
+			label13->Text = str1;
+			label13->Show();
 
 
-		EVENT secondEvent = { 986, "The Battle of Trajan's Gate", "It is a historic mountain pass near Ihtiman, Bulgaria. \nThe pass was called Succi. Later it was named after \nRoman Emperor Trajan, on whose order a fortress \nby the name of Stipon was constructed on the hill over \nthe pass, between Thrace and Macedonia." };
-		std::string secondEventString = "     " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
-		String^ str2 = gcnew String(secondEventString.c_str());
-		label14->Text = str2;
-		label14->Show();
+			EVENT secondEvent = { 986, "The Battle of Trajan's Gate", "It is a historic mountain pass near Ihtiman, Bulgaria. \nThe pass was called Succi. Later it was named after \nRoman Emperor Trajan, on whose order a fortress \nby the name of Stipon was constructed on the hill over \nthe pass, between Thrace and Macedonia." };
+			std::string secondEventString = "     " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
+			String^ str2 = gcnew String(secondEventString.c_str());
+			label14->Text = str2;
+			label14->Show();
 
 
-		EVENT thirdEvent = { 1014, "The Battle of Kleidion", "The Battle of Kleidion of 29 July 1014, in which Tsar \nSamuil of Bulgaria's forces were routed by Byzantine \nEmperor Basil II's army. After the battle, Basil ordered \nall 14,000 Bulgarian captives blinded, with a single \nsoldier left one-eyed to guide every 100 blinded home." };
-		std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
-		String^ str3 = gcnew String(thirdEventString.c_str());
-		label15->Text = str3;
-		label15->Show();
+			EVENT thirdEvent = { 1014, "The Battle of Kleidion", "The Battle of Kleidion of 29 July 1014, in which Tsar \nSamuil of Bulgaria's forces were routed by Byzantine \nEmperor Basil II's army. After the battle, Basil ordered \nall 14,000 Bulgarian captives blinded, with a single \nsoldier left one-eyed to guide every 100 blinded home." };
+			std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
+			String^ str3 = gcnew String(thirdEventString.c_str());
+			label15->Text = str3;
+			label15->Show();
+		}
+		else {
+			textBox5->Show();
+			textBox6->Show();
+			textBox7->Show();
+			textBox8->Show();
+			textBox9->Show();
+			textBox10->Show();
+			textBox11->Show();
+			textBox12->Show();
+			textBox13->Show();
+		}
 	}
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 		EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprising of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
@@ -773,6 +933,16 @@ namespace AmigosQuiz {
 		label13->Hide();
 		label14->Hide();
 		label15->Hide();
+		textBox5->Show();
+		textBox6->Show();
+		textBox7->Show();
+		textBox8->Show();
+		textBox9->Show();
+		textBox10->Show();
+		textBox11->Show();
+		textBox12->Show();
+		textBox13->Show();
+		isAdmin = true;
 	}
 };
 }

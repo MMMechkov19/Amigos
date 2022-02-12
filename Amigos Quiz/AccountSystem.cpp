@@ -98,5 +98,5 @@ void initialiseAccounts() {
 	addAccount({ 7, "Azis", "Georgiev", "azisgeorgiev@codingburgas.bg", "Panda1234" });
 	addAccount({ 8, "Mitko", "Paynera", "mitkopaynera@codingburgas.bg", "Panda1234" });
 	addAccount({ 9, "Tommy", "Innit", "tommyinnit@codingburgas.bg", "Panda1234" });
-	addAccount({ 10, "Tubbo", "Smith", "tubbosmith@codingburgas.bg", "Panda1234" });
+	addAccount({ 10, "Georgi", "Germanov", "ggermanov@codingburgas.bg", "Panda1234" });
 }
