@@ -650,6 +650,7 @@ namespace AmigosQuiz {
 			this->textBox13->Location = System::Drawing::Point(33, 387);
 			this->textBox13->Multiline = true;
 			this->textBox13->Name = L"textBox13";
+			this->textBox13->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox13->Size = System::Drawing::Size(323, 85);
 			this->textBox13->TabIndex = 17;
 			// 
@@ -686,6 +687,7 @@ namespace AmigosQuiz {
 			this->textBox10->Location = System::Drawing::Point(33, 229);
 			this->textBox10->Multiline = true;
 			this->textBox10->Name = L"textBox10";
+			this->textBox10->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox10->Size = System::Drawing::Size(323, 85);
 			this->textBox10->TabIndex = 14;
 			// 
@@ -722,6 +724,7 @@ namespace AmigosQuiz {
 			this->textBox7->Location = System::Drawing::Point(33, 73);
 			this->textBox7->Multiline = true;
 			this->textBox7->Name = L"textBox7";
+			this->textBox7->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox7->Size = System::Drawing::Size(323, 85);
 			this->textBox7->TabIndex = 11;
 			// 
