@@ -1,6 +1,6 @@
 <p>
   <a href=" rel="noopener">
-    <img src="Images/logo2Copy1.png" alt="Logo" width="900" height = "380">
+    <img src="Images/logo2Copy1.png" alt="Logo" width="900" height = "400">
   </a>
 </p>
 
