@@ -128,12 +128,14 @@
     <ClCompile Include="QuizQuestions.cpp" />
     <ClCompile Include="Register.cpp" />
     <ClCompile Include="AccountSystem.cpp" />
+    <ClCompile Include="Admin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountSystem.h" />
     <ClInclude Include="EventForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Admin.h" />
     <ClInclude Include="Lesson.h">
       <FileType>CppForm</FileType>
     </ClInclude>
