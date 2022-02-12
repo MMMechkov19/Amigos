@@ -83,6 +83,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Label^ label16;
 
 
 
@@ -139,6 +140,7 @@ namespace AmigosQuiz {
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -224,6 +226,7 @@ namespace AmigosQuiz {
 			this->label9->Size = System::Drawing::Size(283, 19);
 			this->label9->TabIndex = 6;
 			this->label9->Text = L"Second Bulgarian Kingdom Lesson";
+			this->label9->Click += gcnew System::EventHandler(this, &EventForm::label9_Click);
 			// 
 			// label8
 			// 
@@ -576,6 +579,7 @@ namespace AmigosQuiz {
 			// panel10
 			// 
 			this->panel10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel10.BackgroundImage")));
+			this->panel10->Controls->Add(this->label16);
 			this->panel10->Controls->Add(this->label15);
 			this->panel10->Controls->Add(this->label14);
 			this->panel10->Controls->Add(this->label13);
@@ -616,6 +620,18 @@ namespace AmigosQuiz {
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(0, 16);
 			this->label13->TabIndex = 0;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->BackColor = System::Drawing::Color::Transparent;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Rockwell", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label16->Location = System::Drawing::Point(33, 43);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(50, 16);
+			this->label16->TabIndex = 3;
+			this->label16->Text = L"label16";
 			// 
 			// EventForm
 			// 
@@ -678,6 +694,12 @@ namespace AmigosQuiz {
 		std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
 		String^ str3 = gcnew String(thirdEventString.c_str());
 		label15->Text = str3;
+	}
+	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+		EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprising of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
+		std::string firstEventString = "   " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
+		String^ str1 = gcnew String(firstEventString.c_str());
+		label16->Text = str1;
 	}
 };
 }
