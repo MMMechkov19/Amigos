@@ -645,8 +645,9 @@ namespace AmigosQuiz {
 			this->textBox13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(215)),
 				static_cast<System::Int32>(static_cast<System::Byte>(166)));
 			this->textBox13->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox13->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox13->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox13->ForeColor = System::Drawing::Color::Black;
 			this->textBox13->Location = System::Drawing::Point(33, 387);
 			this->textBox13->Multiline = true;
 			this->textBox13->Name = L"textBox13";
@@ -658,11 +659,12 @@ namespace AmigosQuiz {
 			// 
 			this->textBox12->BackColor = System::Drawing::Color::White;
 			this->textBox12->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox12->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox12->ForeColor = System::Drawing::Color::Black;
 			this->textBox12->Location = System::Drawing::Point(106, 353);
 			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(250, 19);
+			this->textBox12->Size = System::Drawing::Size(250, 18);
 			this->textBox12->TabIndex = 16;
 			// 
 			// textBox11
@@ -670,20 +672,23 @@ namespace AmigosQuiz {
 			this->textBox11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(173)), static_cast<System::Int32>(static_cast<System::Byte>(173)),
 				static_cast<System::Int32>(static_cast<System::Byte>(165)));
 			this->textBox11->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox11->ForeColor = System::Drawing::Color::Transparent;
-			this->textBox11->Location = System::Drawing::Point(33, 352);
+			this->textBox11->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox11->ForeColor = System::Drawing::Color::Black;
+			this->textBox11->Location = System::Drawing::Point(33, 355);
 			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(57, 19);
+			this->textBox11->Size = System::Drawing::Size(57, 18);
 			this->textBox11->TabIndex = 15;
+			this->textBox11->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// textBox10
 			// 
 			this->textBox10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(215)),
 				static_cast<System::Int32>(static_cast<System::Byte>(166)));
 			this->textBox10->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox10->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox10->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox10->ForeColor = System::Drawing::Color::Black;
 			this->textBox10->Location = System::Drawing::Point(33, 229);
 			this->textBox10->Multiline = true;
 			this->textBox10->Name = L"textBox10";
@@ -695,11 +700,12 @@ namespace AmigosQuiz {
 			// 
 			this->textBox9->BackColor = System::Drawing::Color::White;
 			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox9->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox9->ForeColor = System::Drawing::Color::Black;
 			this->textBox9->Location = System::Drawing::Point(106, 198);
 			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(250, 19);
+			this->textBox9->Size = System::Drawing::Size(250, 18);
 			this->textBox9->TabIndex = 13;
 			// 
 			// textBox8
@@ -707,20 +713,23 @@ namespace AmigosQuiz {
 			this->textBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(173)), static_cast<System::Int32>(static_cast<System::Byte>(173)),
 				static_cast<System::Int32>(static_cast<System::Byte>(165)));
 			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox8->ForeColor = System::Drawing::Color::Transparent;
-			this->textBox8->Location = System::Drawing::Point(33, 198);
+			this->textBox8->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox8->ForeColor = System::Drawing::Color::Black;
+			this->textBox8->Location = System::Drawing::Point(33, 199);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(57, 19);
+			this->textBox8->Size = System::Drawing::Size(57, 18);
 			this->textBox8->TabIndex = 12;
+			this->textBox8->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// textBox7
 			// 
 			this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(217)), static_cast<System::Int32>(static_cast<System::Byte>(215)),
 				static_cast<System::Int32>(static_cast<System::Byte>(166)));
 			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox7->ForeColor = System::Drawing::Color::Transparent;
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox7->ForeColor = System::Drawing::Color::Black;
 			this->textBox7->Location = System::Drawing::Point(33, 73);
 			this->textBox7->Multiline = true;
 			this->textBox7->Name = L"textBox7";
@@ -732,11 +741,12 @@ namespace AmigosQuiz {
 			// 
 			this->textBox6->BackColor = System::Drawing::Color::White;
 			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->textBox6->ForeColor = System::Drawing::Color::Black;
 			this->textBox6->Location = System::Drawing::Point(106, 40);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(250, 19);
+			this->textBox6->Size = System::Drawing::Size(250, 18);
 			this->textBox6->TabIndex = 10;
 			// 
 			// textBox5
@@ -744,12 +754,14 @@ namespace AmigosQuiz {
 			this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(173)), static_cast<System::Int32>(static_cast<System::Byte>(173)),
 				static_cast<System::Int32>(static_cast<System::Byte>(165)));
 			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox5->ForeColor = System::Drawing::Color::Transparent;
-			this->textBox5->Location = System::Drawing::Point(33, 40);
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Rockwell", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox5->ForeColor = System::Drawing::Color::Black;
+			this->textBox5->Location = System::Drawing::Point(33, 41);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(57, 19);
+			this->textBox5->Size = System::Drawing::Size(57, 18);
 			this->textBox5->TabIndex = 9;
+			this->textBox5->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// label18
 			// 
