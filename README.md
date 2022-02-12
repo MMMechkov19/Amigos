@@ -1,6 +1,8 @@
-<a href=" rel="noopener">
-  <img src="Images/logo2Copy.jpg" alt="Logo" width="500" height = "450">
-</a>
+<p>
+  <a href=" rel="noopener">
+    <img src="Images/logo2Copy.jpg" alt="Logo" width="500" height = "450">
+  </a>
+</p>
 
 ## 📝 Table of Contents
 - [Description](#description)
