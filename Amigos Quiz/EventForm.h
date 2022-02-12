@@ -85,6 +85,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::Label^ label18;
 
 
 
@@ -138,11 +139,12 @@ namespace AmigosQuiz {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -581,6 +583,7 @@ namespace AmigosQuiz {
 			// panel10
 			// 
 			this->panel10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel10.BackgroundImage")));
+			this->panel10->Controls->Add(this->label18);
 			this->panel10->Controls->Add(this->label17);
 			this->panel10->Controls->Add(this->label16);
 			this->panel10->Controls->Add(this->label15);
@@ -591,6 +594,28 @@ namespace AmigosQuiz {
 			this->panel10->Size = System::Drawing::Size(396, 510);
 			this->panel10->TabIndex = 10;
 			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->BackColor = System::Drawing::Color::Transparent;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Rockwell", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label18->Location = System::Drawing::Point(33, 355);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(0, 16);
+			this->label18->TabIndex = 5;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->BackColor = System::Drawing::Color::Transparent;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Rockwell", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label17->Location = System::Drawing::Point(33, 200);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(0, 16);
+			this->label17->TabIndex = 4;
+			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
@@ -599,9 +624,8 @@ namespace AmigosQuiz {
 				static_cast<System::Byte>(0)));
 			this->label16->Location = System::Drawing::Point(33, 43);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(50, 16);
+			this->label16->Size = System::Drawing::Size(0, 16);
 			this->label16->TabIndex = 3;
-			this->label16->Text = L"label16";
 			// 
 			// label15
 			// 
@@ -635,18 +659,6 @@ namespace AmigosQuiz {
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(0, 16);
 			this->label13->TabIndex = 0;
-			// 
-			// label17
-			// 
-			this->label17->AutoSize = true;
-			this->label17->BackColor = System::Drawing::Color::Transparent;
-			this->label17->Font = (gcnew System::Drawing::Font(L"Rockwell", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label17->Location = System::Drawing::Point(33, 200);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(50, 16);
-			this->label17->TabIndex = 4;
-			this->label17->Text = L"label17";
 			// 
 			// EventForm
 			// 
@@ -715,13 +727,19 @@ namespace AmigosQuiz {
 		EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprising of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
 		std::string firstEventString = "   " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
 		String^ str1 = gcnew String(firstEventString.c_str());
-		label16->Text = str1;
+		label13->Text = str1;
 
 
-		EVENT secondEvent = { 986, "The Battle of Klokotnitsa", "The Battle of Klokotnitsa between Second Bulgarian \nEmpire and Empire of Thessalonica. As result, Bulgaria \nemerged once again as the most powerful state in South\n-Eastern Europe. Nevertheless, Bulgarian power was \ncontested and surpassed by the rising Empire of Nicaea." };
-		std::string secondEventString = "     " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
+		EVENT secondEvent = { 1235, "The Battle of Klokotnitsa", "The Battle of Klokotnitsa between Second Bulgarian \nEmpire and Empire of Thessalonica. As result, Bulgaria \nemerged once again as the most powerful state in South\n-Eastern Europe. Nevertheless, Bulgarian power was \ncontested and surpassed by the rising Empire of Nicaea." };
+		std::string secondEventString = "   " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
 		String^ str2 = gcnew String(secondEventString.c_str());
-		label17->Text = str2;
+		label14->Text = str2;
+
+
+		EVENT thirdEvent = { 1396, "The fall of the Vidin kingdom", "In 1396, Stratsimir contributed soldiers to assist the \nChristian nations' bid to overturn the Ottoman Empire. \nFollowing defeat at the hands of the Ottomans outside \nthe city of Nicopolis, Vidin finally fell under the sphere \nof the Ottomans led by Bayezid I." };
+		std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
+		String^ str3 = gcnew String(thirdEventString.c_str());
+		label15->Text = str3;
 	}
 };
 }
