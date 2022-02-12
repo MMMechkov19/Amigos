@@ -2,9 +2,9 @@
 #include <iostream>
 
 struct EVENT {
-	int year;
-	std::string name;
-	std::string description;
+	int year = 0;
+	std::string name = "";
+	std::string description = "";
 };
 
 struct EVENT_LIST {

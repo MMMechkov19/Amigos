@@ -1,13 +1,8 @@
 ﻿#pragma once
 #include "AccountSystem.h"
+#include "Admin.h"
 #include <iostream>
 #include <string>
-
-struct EVENT {
-	int year;
-	std::string name;
-	std::string description;
-};
 
 namespace AmigosQuiz {
 
@@ -870,6 +865,8 @@ namespace AmigosQuiz {
 		textBox12->Hide();
 		textBox13->Hide();
 
+		initialiseEvents();
+
 		std::string name = currentAccount.firstName + " " + currentAccount.lastName;
 		String^ str2 = gcnew String(name.c_str());
 		label12->Text = str2;
@@ -906,28 +903,67 @@ namespace AmigosQuiz {
 			textBox11->Show();
 			textBox12->Show();
 			textBox13->Show();
+
+			EVENT_LIST* firstKingdomEvents = getFirstKingdomEvents();
+			textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+			textBox6->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+			textBox7->Text = gcnew String(firstKingdomEvents->event.description.c_str());
+			firstKingdomEvents = firstKingdomEvents->next;
+			textBox8->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+			textBox9->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+			textBox10->Text = gcnew String(firstKingdomEvents->event.description.c_str());
+			firstKingdomEvents = firstKingdomEvents->next;
+			textBox11->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+			textBox12->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+			textBox13->Text = gcnew String(firstKingdomEvents->event.description.c_str());
 		}
 	}
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
-		EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprising of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
-		std::string firstEventString = "   " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
-		String^ str1 = gcnew String(firstEventString.c_str());
-		label13->Text = str1;
-		label13->Show();
+		if (isAdmin == false) {
+			EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprising of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
+			std::string firstEventString = "   " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
+			String^ str1 = gcnew String(firstEventString.c_str());
+			label13->Text = str1;
+			label13->Show();
 
 
-		EVENT secondEvent = { 1235, "The Battle of Klokotnitsa", "The Battle of Klokotnitsa between Second Bulgarian \nEmpire and Empire of Thessalonica. As result, Bulgaria \nemerged once again as the most powerful state in South\n-Eastern Europe. Nevertheless, Bulgarian power was \ncontested and surpassed by the rising Empire of Nicaea." };
-		std::string secondEventString = "   " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
-		String^ str2 = gcnew String(secondEventString.c_str());
-		label14->Text = str2;
-		label14->Show();
+			EVENT secondEvent = { 1235, "The Battle of Klokotnitsa", "The Battle of Klokotnitsa between Second Bulgarian \nEmpire and Empire of Thessalonica. As result, Bulgaria \nemerged once again as the most powerful state in South\n-Eastern Europe. Nevertheless, Bulgarian power was \ncontested and surpassed by the rising Empire of Nicaea." };
+			std::string secondEventString = "   " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
+			String^ str2 = gcnew String(secondEventString.c_str());
+			label14->Text = str2;
+			label14->Show();
 
 
-		EVENT thirdEvent = { 1396, "The fall of the Vidin kingdom", "In 1396, Stratsimir contributed soldiers to assist the \nChristian nations' bid to overturn the Ottoman Empire. \nFollowing defeat at the hands of the Ottomans outside \nthe city of Nicopolis, Vidin finally fell under the sphere \nof the Ottomans led by Bayezid I." };
-		std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
-		String^ str3 = gcnew String(thirdEventString.c_str());
-		label15->Text = str3;
-		label15->Show();
+			EVENT thirdEvent = { 1396, "The fall of the Vidin kingdom", "In 1396, Stratsimir contributed soldiers to assist the \nChristian nations' bid to overturn the Ottoman Empire. \nFollowing defeat at the hands of the Ottomans outside \nthe city of Nicopolis, Vidin finally fell under the sphere \nof the Ottomans led by Bayezid I." };
+			std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
+			String^ str3 = gcnew String(thirdEventString.c_str());
+			label15->Text = str3;
+			label15->Show();
+		}
+		else {
+			textBox5->Show();
+			textBox6->Show();
+			textBox7->Show();
+			textBox8->Show();
+			textBox9->Show();
+			textBox10->Show();
+			textBox11->Show();
+			textBox12->Show();
+			textBox13->Show();
+
+			EVENT_LIST* secondKingdomEvents = getSecondKingdomEvents();
+			textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+			textBox6->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+			textBox7->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+			secondKingdomEvents = secondKingdomEvents->next;
+			textBox8->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+			textBox9->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+			textBox10->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+			secondKingdomEvents = secondKingdomEvents->next;
+			textBox11->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+			textBox12->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+			textBox13->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+		}
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		label13->Hide();
