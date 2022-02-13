@@ -2,6 +2,7 @@
 #include <iostream>
 
 struct EVENT {
+	int id;
 	int year = 0;
 	std::string name = "";
 	std::string description = "";

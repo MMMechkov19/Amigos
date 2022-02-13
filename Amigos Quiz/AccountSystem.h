@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
+//Structure for Accounts
 struct ACCOUNT {
 		int id;
 		std::string firstName;
@@ -9,6 +10,7 @@ struct ACCOUNT {
 		std::string password;
 	};
 
+//Structure for Account List
 struct ACCOUNT_LIST {
 		ACCOUNT account;
 		struct ACCOUNT_LIST* next = NULL;
