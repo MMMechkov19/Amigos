@@ -949,7 +949,7 @@ namespace AmigosQuiz {
 	}
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (isAdmin == false) {
-			EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprisin-g of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
+			/*EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprisin-g of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
 			std::string firstEventString = "   " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
 			String^ str1 = gcnew String(firstEventString.c_str());
 			label13->Text = str1;
@@ -967,7 +967,29 @@ namespace AmigosQuiz {
 			std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
 			String^ str3 = gcnew String(thirdEventString.c_str());
 			label15->Text = str3;
-			label15->Show();
+			label15->Show();*/
+
+			EVENT_LIST* secondKingdomEvents = getSecondKingdomEvents();
+			textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+			textBox5->ReadOnly = true;
+			textBox6->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+			textBox6->ReadOnly = true;
+			textBox7->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+			textBox7->ReadOnly = true;
+			secondKingdomEvents = secondKingdomEvents->next;
+			textBox8->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+			textBox8->ReadOnly = true;
+			textBox9->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+			textBox9->ReadOnly = true;
+			textBox10->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+			textBox10->ReadOnly = true;
+			secondKingdomEvents = secondKingdomEvents->next;
+			textBox11->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+			textBox11->ReadOnly = true;
+			textBox12->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+			textBox12->ReadOnly = true;
+			textBox13->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+			textBox13->ReadOnly = true;
 		}
 		else {
 			textBox5->Show();
