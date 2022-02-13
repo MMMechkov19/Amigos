@@ -639,6 +639,7 @@ namespace AmigosQuiz {
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(396, 510);
 			this->panel10->TabIndex = 10;
+			this->panel10->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &EventForm::panel10_Paint);
 			// 
 			// textBox13
 			// 
@@ -870,15 +871,6 @@ namespace AmigosQuiz {
 	private: System::Void vScrollBar1_Scroll(System::Object^ sender, System::Windows::Forms::ScrollEventArgs^ e) {
 	}
 	private: System::Void EventForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		textBox5->Hide();
-		textBox6->Hide();
-		textBox7->Hide();
-		textBox8->Hide();
-		textBox9->Hide();
-		textBox10->Hide();
-		textBox11->Hide();
-		textBox12->Hide();
-		textBox13->Hide();
 
 		initialiseEvents();
 
@@ -888,7 +880,7 @@ namespace AmigosQuiz {
 	}
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (isAdmin == false) {
-			EVENT firstEvent = { 811, "The battle of the Varbishki Pass", "The famous Battle of Pliska was fought in the pass on \nJuly 26, 811 between the armies of Bulgarian Empire \nled by Khan Krum and the Byzantine Empire under \nNicephorus I which ended with a decisive Bulgarian \nvictory and the death of the Byzantine Emperor." };
+			/*EVENT firstEvent = { 811, "The battle of the Varbishki Pass", "The famous Battle of Pliska was fought in the pass on \nJuly 26, 811 between the armies of Bulgarian Empire \nled by Khan Krum and the Byzantine Empire under \nNicephorus I which ended with a decisive Bulgarian \nvictory and the death of the Byzantine Emperor." };
 			std::string firstEventString = "     " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
 			String^ str1 = gcnew String(firstEventString.c_str());
 			label13->Text = str1;
@@ -906,7 +898,29 @@ namespace AmigosQuiz {
 			std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
 			String^ str3 = gcnew String(thirdEventString.c_str());
 			label15->Text = str3;
-			label15->Show();
+			label15->Show();*/
+
+			EVENT_LIST* firstKingdomEvents = getFirstKingdomEvents();
+			textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+			textBox5->ReadOnly = true;
+			textBox6->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+			textBox6->ReadOnly = true;
+			textBox7->Text = gcnew String(firstKingdomEvents->event.description.c_str());
+			textBox7->ReadOnly = true;
+			firstKingdomEvents = firstKingdomEvents->next;
+			textBox8->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+			textBox8->ReadOnly = true;
+			textBox9->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+			textBox9->ReadOnly = true;
+			textBox10->Text = gcnew String(firstKingdomEvents->event.description.c_str());
+			textBox10->ReadOnly = true;
+			firstKingdomEvents = firstKingdomEvents->next;
+			textBox11->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+			textBox11->ReadOnly = true;
+			textBox12->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+			textBox12->ReadOnly = true;
+			textBox13->Text = gcnew String(firstKingdomEvents->event.description.c_str());
+			textBox13->ReadOnly = true;
 		}
 		else {
 			textBox5->Show();
@@ -999,29 +1013,31 @@ namespace AmigosQuiz {
 	}
 
 	private: System::Void HideAdminTextBoxes()
-			   {
-				   textBox5->Hide();
-				   textBox6->Hide();
-				   textBox7->Hide();
-				   textBox8->Hide();
-				   textBox9->Hide();
-				   textBox10->Hide();
-				   textBox11->Hide();
-				   textBox12->Hide();
-				   textBox13->Hide();
-			   }
+	{
+		textBox5->ReadOnly = true;
+		textBox6->ReadOnly = true;
+		textBox7->ReadOnly = true;
+		textBox8->ReadOnly = true;
+		textBox9->ReadOnly = true;
+		textBox10->ReadOnly = true;
+		textBox11->ReadOnly = true;
+		textBox12->ReadOnly = true;
+		textBox13->ReadOnly = true;
+	}
 
 	private: System::Void ShowAdminTextBoxes()
 	{
-		textBox5->Show();
-		textBox6->Show();
-		textBox7->Show();
-		textBox8->Show();
-		textBox9->Show();
-		textBox10->Show();
-		textBox11->Show();
-		textBox12->Show();
-		textBox13->Show();
+		textBox5->ReadOnly = false;
+		textBox6->ReadOnly = false;
+		textBox7->ReadOnly = false;
+		textBox8->ReadOnly = false;
+		textBox9->ReadOnly = false;
+		textBox10->ReadOnly = false;
+		textBox11->ReadOnly = false;
+		textBox12->ReadOnly = false;
+		textBox13->ReadOnly = false;
 	}
+private: System::Void panel10_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
 };
 }
