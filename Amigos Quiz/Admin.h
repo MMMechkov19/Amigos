@@ -16,7 +16,6 @@ struct EVENT_LIST {
 
 
 __declspec(selectany) EVENT_LIST* events = new EVENT_LIST;
-// Function for adding the event
 void addEvent(EVENT);
 EVENT_LIST* getFirstKingdomEvents();
 EVENT_LIST* getSecondKingdomEvents();

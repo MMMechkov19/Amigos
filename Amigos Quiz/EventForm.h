@@ -935,7 +935,7 @@ namespace AmigosQuiz {
 	}
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (isAdmin == false) {
-			EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprising of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
+			EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprisin-g of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
 			std::string firstEventString = "   " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
 			String^ str1 = gcnew String(firstEventString.c_str());
 			label13->Text = str1;
@@ -981,9 +981,38 @@ namespace AmigosQuiz {
 		}
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		label13->Hide();
-		label14->Hide();
-		label15->Hide();
+		if (isAdmin == false)
+		{
+			label13->Hide();
+			label14->Hide();
+			label15->Hide();
+			ShowAdminTextBoxes();
+			isAdmin = true;
+			button3->Text = "Save";
+		}
+		else
+		{
+			button3->Text = "Admin";
+			HideAdminTextBoxes();
+			isAdmin = false;
+		}
+	}
+
+	private: System::Void HideAdminTextBoxes()
+			   {
+				   textBox5->Hide();
+				   textBox6->Hide();
+				   textBox7->Hide();
+				   textBox8->Hide();
+				   textBox9->Hide();
+				   textBox10->Hide();
+				   textBox11->Hide();
+				   textBox12->Hide();
+				   textBox13->Hide();
+			   }
+
+	private: System::Void ShowAdminTextBoxes()
+	{
 		textBox5->Show();
 		textBox6->Show();
 		textBox7->Show();
@@ -993,7 +1022,6 @@ namespace AmigosQuiz {
 		textBox11->Show();
 		textBox12->Show();
 		textBox13->Show();
-		isAdmin = true;
 	}
 };
 }
