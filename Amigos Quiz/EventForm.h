@@ -96,6 +96,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::TextBox^ textBox13;
 	private: System::Windows::Forms::TextBox^ textBox12;
 	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Panel^ panel11;
 
 
 
@@ -116,6 +117,7 @@ namespace AmigosQuiz {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EventForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
@@ -166,7 +168,7 @@ namespace AmigosQuiz {
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->panel11 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -202,6 +204,24 @@ namespace AmigosQuiz {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(347, 532);
 			this->panel1->TabIndex = 1;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
+				static_cast<System::Int32>(static_cast<System::Byte>(100)));
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Rockwell", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->button4->Location = System::Drawing::Point(100, 422);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(123, 36);
+			this->button4->TabIndex = 11;
+			this->button4->Text = L"Save";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &EventForm::button4_Click);
 			// 
 			// button3
 			// 
@@ -259,6 +279,7 @@ namespace AmigosQuiz {
 			this->label10->Size = System::Drawing::Size(244, 19);
 			this->label10->TabIndex = 7;
 			this->label10->Text = L"First Bulgarian Kingdom Test";
+			this->label10->Click += gcnew System::EventHandler(this, &EventForm::label10_Click);
 			// 
 			// label9
 			// 
@@ -835,29 +856,20 @@ namespace AmigosQuiz {
 			this->label13->Size = System::Drawing::Size(0, 16);
 			this->label13->TabIndex = 0;
 			// 
-			// button4
+			// panel11
 			// 
-			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
-				static_cast<System::Int32>(static_cast<System::Byte>(100)));
-			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button4->FlatAppearance->BorderSize = 0;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Rockwell", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button4->Location = System::Drawing::Point(100, 422);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(123, 36);
-			this->button4->TabIndex = 11;
-			this->button4->Text = L"Save";
-			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &EventForm::button4_Click);
+			this->panel11->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel11.BackgroundImage")));
+			this->panel11->Location = System::Drawing::Point(346, 1);
+			this->panel11->Name = L"panel11";
+			this->panel11->Size = System::Drawing::Size(532, 524);
+			this->panel11->TabIndex = 11;
 			// 
 			// EventForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(738, 505);
+			this->Controls->Add(this->panel11);
 			this->Controls->Add(this->panel10);
 			this->Controls->Add(this->panel1);
 			this->Name = L"EventForm";
@@ -901,9 +913,10 @@ namespace AmigosQuiz {
 		String^ str2 = gcnew String(name.c_str());
 		label12->Text = str2;
 		button4->Hide();
+		panel11->Hide();
 	}
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		panel11->Hide();
 		EVENT_LIST* firstKingdomEvents = getFirstKingdomEvents();
 		textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
 		textBox6->Text = gcnew String(firstKingdomEvents->event.name.c_str());
@@ -920,7 +933,7 @@ namespace AmigosQuiz {
 		textBox13->Text = gcnew String(firstKingdomEvents->event.description.c_str());
 	}
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		panel11->Hide();
 		EVENT_LIST* secondKingdomEvents = getSecondKingdomEvents();
 		textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
 		textBox6->Text = gcnew String(secondKingdomEvents->event.name.c_str());
@@ -1014,5 +1027,8 @@ namespace AmigosQuiz {
 		HideAdminTextBoxes();
 		button4->Hide();
 	}
+private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel11->Show();
+}
 };
 }
