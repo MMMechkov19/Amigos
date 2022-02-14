@@ -19,4 +19,6 @@ __declspec(selectany) EVENT_LIST* events = new EVENT_LIST;
 void addEvent(EVENT);
 EVENT_LIST* getFirstKingdomEvents();
 EVENT_LIST* getSecondKingdomEvents();
+void removeFirstKingdomEvents();
+void removeSecondKingdomEvents();
 void initialiseEvents();

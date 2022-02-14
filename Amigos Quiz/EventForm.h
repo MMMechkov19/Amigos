@@ -3,6 +3,8 @@
 #include "Admin.h"
 #include <iostream>
 #include <string>
+#include <msclr\marshal_cppstd.h>
+using namespace msclr::interop;
 
 namespace AmigosQuiz {
 
@@ -93,6 +95,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::Windows::Forms::TextBox^ textBox13;
 	private: System::Windows::Forms::TextBox^ textBox12;
+	private: System::Windows::Forms::Button^ button4;
 
 
 
@@ -163,6 +166,7 @@ namespace AmigosQuiz {
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -183,6 +187,7 @@ namespace AmigosQuiz {
 			// panel1
 			// 
 			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
+			this->panel1->Controls->Add(this->button4);
 			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->label12);
 			this->panel1->Controls->Add(this->label11);
@@ -830,6 +835,24 @@ namespace AmigosQuiz {
 			this->label13->Size = System::Drawing::Size(0, 16);
 			this->label13->TabIndex = 0;
 			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
+				static_cast<System::Int32>(static_cast<System::Byte>(100)));
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Rockwell", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->button4->Location = System::Drawing::Point(100, 422);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(123, 36);
+			this->button4->TabIndex = 11;
+			this->button4->Text = L"Save";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &EventForm::button4_Click);
+			// 
 			// EventForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -877,28 +900,10 @@ namespace AmigosQuiz {
 		std::string name = currentAccount.firstName + " " + currentAccount.lastName;
 		String^ str2 = gcnew String(name.c_str());
 		label12->Text = str2;
+		button4->Hide();
 	}
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (isAdmin == false) {
-			/*EVENT firstEvent = { 811, "The battle of the Varbishki Pass", "The famous Battle of Pliska was fought in the pass on \nJuly 26, 811 between the armies of Bulgarian Empire \nled by Khan Krum and the Byzantine Empire under \nNicephorus I which ended with a decisive Bulgarian \nvictory and the death of the Byzantine Emperor." };
-			std::string firstEventString = "     " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
-			String^ str1 = gcnew String(firstEventString.c_str());
-			label13->Text = str1;
-			label13->Show();
-
-
-			EVENT secondEvent = { 986, "The Battle of Trajan's Gate", "It is a historic mountain pass near Ihtiman, Bulgaria. \nThe pass was called Succi. Later it was named after \nRoman Emperor Trajan, on whose order a fortress \nby the name of Stipon was constructed on the hill over \nthe pass, between Thrace and Macedonia." };
-			std::string secondEventString = "     " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
-			String^ str2 = gcnew String(secondEventString.c_str());
-			label14->Text = str2;
-			label14->Show();
-
-
-			EVENT thirdEvent = { 1014, "The Battle of Kleidion", "The Battle of Kleidion of 29 July 1014, in which Tsar \nSamuil of Bulgaria's forces were routed by Byzantine \nEmperor Basil II's army. After the battle, Basil ordered \nall 14,000 Bulgarian captives blinded, with a single \nsoldier left one-eyed to guide every 100 blinded home." };
-			std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
-			String^ str3 = gcnew String(thirdEventString.c_str());
-			label15->Text = str3;
-			label15->Show();*/
 
 			EVENT_LIST* firstKingdomEvents = getFirstKingdomEvents();
 			textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
@@ -907,6 +912,7 @@ namespace AmigosQuiz {
 			textBox6->ReadOnly = true;
 			textBox7->Text = gcnew String(firstKingdomEvents->event.description.c_str());
 			textBox7->ReadOnly = true;
+
 			firstKingdomEvents = firstKingdomEvents->next;
 			textBox8->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
 			textBox8->ReadOnly = true;
@@ -914,6 +920,7 @@ namespace AmigosQuiz {
 			textBox9->ReadOnly = true;
 			textBox10->Text = gcnew String(firstKingdomEvents->event.description.c_str());
 			textBox10->ReadOnly = true;
+
 			firstKingdomEvents = firstKingdomEvents->next;
 			textBox11->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
 			textBox11->ReadOnly = true;
@@ -937,10 +944,12 @@ namespace AmigosQuiz {
 			textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
 			textBox6->Text = gcnew String(firstKingdomEvents->event.name.c_str());
 			textBox7->Text = gcnew String(firstKingdomEvents->event.description.c_str());
+
 			firstKingdomEvents = firstKingdomEvents->next;
 			textBox8->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
 			textBox9->Text = gcnew String(firstKingdomEvents->event.name.c_str());
 			textBox10->Text = gcnew String(firstKingdomEvents->event.description.c_str());
+
 			firstKingdomEvents = firstKingdomEvents->next;
 			textBox11->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
 			textBox12->Text = gcnew String(firstKingdomEvents->event.name.c_str());
@@ -949,25 +958,6 @@ namespace AmigosQuiz {
 	}
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (isAdmin == false) {
-			/*EVENT firstEvent = { 1185, "The Uprising of Asen and Peter", "The Uprisin-g of Asen and Peter was revolt of Bulgarians \nand Vlachs living in Moesia and the Balkan Mountains, \nthen the theme of Paristrion of the Byzantine Empire, \ncaused by a tax increase. After their return, many of the \nprotesters were unwilling to join the rebellion." };
-			std::string firstEventString = "   " + std::to_string(firstEvent.year) + "          " + firstEvent.name + "\n\n" + firstEvent.description;
-			String^ str1 = gcnew String(firstEventString.c_str());
-			label13->Text = str1;
-			label13->Show();
-
-
-			EVENT secondEvent = { 1235, "The Battle of Klokotnitsa", "The Battle of Klokotnitsa between Second Bulgarian \nEmpire and Empire of Thessalonica. As result, Bulgaria \nemerged once again as the most powerful state in South\n-Eastern Europe. Nevertheless, Bulgarian power was \ncontested and surpassed by the rising Empire of Nicaea." };
-			std::string secondEventString = "   " + std::to_string(secondEvent.year) + "          " + secondEvent.name + "\n\n" + secondEvent.description;
-			String^ str2 = gcnew String(secondEventString.c_str());
-			label14->Text = str2;
-			label14->Show();
-
-
-			EVENT thirdEvent = { 1396, "The fall of the Vidin kingdom", "In 1396, Stratsimir contributed soldiers to assist the \nChristian nations' bid to overturn the Ottoman Empire. \nFollowing defeat at the hands of the Ottomans outside \nthe city of Nicopolis, Vidin finally fell under the sphere \nof the Ottomans led by Bayezid I." };
-			std::string thirdEventString = "   " + std::to_string(thirdEvent.year) + "          " + thirdEvent.name + "\n\n" + thirdEvent.description;
-			String^ str3 = gcnew String(thirdEventString.c_str());
-			label15->Text = str3;
-			label15->Show();*/
 
 			EVENT_LIST* secondKingdomEvents = getSecondKingdomEvents();
 			textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
@@ -976,6 +966,7 @@ namespace AmigosQuiz {
 			textBox6->ReadOnly = true;
 			textBox7->Text = gcnew String(secondKingdomEvents->event.description.c_str());
 			textBox7->ReadOnly = true;
+
 			secondKingdomEvents = secondKingdomEvents->next;
 			textBox8->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
 			textBox8->ReadOnly = true;
@@ -983,6 +974,7 @@ namespace AmigosQuiz {
 			textBox9->ReadOnly = true;
 			textBox10->Text = gcnew String(secondKingdomEvents->event.description.c_str());
 			textBox10->ReadOnly = true;
+
 			secondKingdomEvents = secondKingdomEvents->next;
 			textBox11->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
 			textBox11->ReadOnly = true;
@@ -1006,10 +998,12 @@ namespace AmigosQuiz {
 			textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
 			textBox6->Text = gcnew String(secondKingdomEvents->event.name.c_str());
 			textBox7->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+
 			secondKingdomEvents = secondKingdomEvents->next;
 			textBox8->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
 			textBox9->Text = gcnew String(secondKingdomEvents->event.name.c_str());
 			textBox10->Text = gcnew String(secondKingdomEvents->event.description.c_str());
+
 			secondKingdomEvents = secondKingdomEvents->next;
 			textBox11->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
 			textBox12->Text = gcnew String(secondKingdomEvents->event.name.c_str());
@@ -1017,6 +1011,12 @@ namespace AmigosQuiz {
 		}
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		ShowAdminTextBoxes();
+
+		button3->Hide();
+		button4->Show();
+
 		if (isAdmin == false)
 		{
 			label13->Hide();
@@ -1024,7 +1024,6 @@ namespace AmigosQuiz {
 			label15->Hide();
 			ShowAdminTextBoxes();
 			isAdmin = true;
-			button3->Text = "Save";
 		}
 		else
 		{
@@ -1059,7 +1058,50 @@ namespace AmigosQuiz {
 		textBox12->ReadOnly = false;
 		textBox13->ReadOnly = false;
 	}
-private: System::Void panel10_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
+	private: System::Void panel10_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		button4->Hide();
+		button3->Show();
+
+		EVENT ev1 =
+		{
+			atoi(marshal_as<std::string>(textBox5->Text).c_str()),
+			marshal_as<std::string>(textBox6->Text),
+			marshal_as<std::string>(textBox7->Text)
+		};
+
+		EVENT ev2 =
+		{
+			atoi(marshal_as<std::string>(textBox8->Text).c_str()),
+			marshal_as<std::string>(textBox9->Text),
+			marshal_as<std::string>(textBox10->Text)
+		};
+
+		EVENT ev3 =
+		{
+			atoi(marshal_as<std::string>(textBox11->Text).c_str()),
+			marshal_as<std::string>(textBox12->Text),
+			marshal_as<std::string>(textBox13->Text)
+		};
+
+		if (ev1.year <= 1018 && ev2.year <= 1018 && ev3.year <= 1018) {
+			removeFirstKingdomEvents();
+			removeFirstKingdomEvents();
+			removeFirstKingdomEvents();
+		}
+		else {
+			removeSecondKingdomEvents();
+			removeSecondKingdomEvents();
+			removeSecondKingdomEvents();
+		}
+
+		addEvent(ev1);
+		addEvent(ev2);
+		addEvent(ev3);
+
+		HideAdminTextBoxes();
+		button4->Hide();
+	}
 };
 }
