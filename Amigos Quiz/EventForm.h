@@ -903,112 +903,38 @@ namespace AmigosQuiz {
 		button4->Hide();
 	}
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (isAdmin == false) {
 
-			EVENT_LIST* firstKingdomEvents = getFirstKingdomEvents();
-			textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
-			textBox5->ReadOnly = true;
-			textBox6->Text = gcnew String(firstKingdomEvents->event.name.c_str());
-			textBox6->ReadOnly = true;
-			textBox7->Text = gcnew String(firstKingdomEvents->event.description.c_str());
-			textBox7->ReadOnly = true;
+		EVENT_LIST* firstKingdomEvents = getFirstKingdomEvents();
+		textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+		textBox6->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+		textBox7->Text = gcnew String(firstKingdomEvents->event.description.c_str());
 
-			firstKingdomEvents = firstKingdomEvents->next;
-			textBox8->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
-			textBox8->ReadOnly = true;
-			textBox9->Text = gcnew String(firstKingdomEvents->event.name.c_str());
-			textBox9->ReadOnly = true;
-			textBox10->Text = gcnew String(firstKingdomEvents->event.description.c_str());
-			textBox10->ReadOnly = true;
+		firstKingdomEvents = firstKingdomEvents->next;
+		textBox8->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+		textBox9->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+		textBox10->Text = gcnew String(firstKingdomEvents->event.description.c_str());
 
-			firstKingdomEvents = firstKingdomEvents->next;
-			textBox11->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
-			textBox11->ReadOnly = true;
-			textBox12->Text = gcnew String(firstKingdomEvents->event.name.c_str());
-			textBox12->ReadOnly = true;
-			textBox13->Text = gcnew String(firstKingdomEvents->event.description.c_str());
-			textBox13->ReadOnly = true;
-		}
-		else {
-			textBox5->Show();
-			textBox6->Show();
-			textBox7->Show();
-			textBox8->Show();
-			textBox9->Show();
-			textBox10->Show();
-			textBox11->Show();
-			textBox12->Show();
-			textBox13->Show();
-
-			EVENT_LIST* firstKingdomEvents = getFirstKingdomEvents();
-			textBox5->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
-			textBox6->Text = gcnew String(firstKingdomEvents->event.name.c_str());
-			textBox7->Text = gcnew String(firstKingdomEvents->event.description.c_str());
-
-			firstKingdomEvents = firstKingdomEvents->next;
-			textBox8->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
-			textBox9->Text = gcnew String(firstKingdomEvents->event.name.c_str());
-			textBox10->Text = gcnew String(firstKingdomEvents->event.description.c_str());
-
-			firstKingdomEvents = firstKingdomEvents->next;
-			textBox11->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
-			textBox12->Text = gcnew String(firstKingdomEvents->event.name.c_str());
-			textBox13->Text = gcnew String(firstKingdomEvents->event.description.c_str());
-		}
+		firstKingdomEvents = firstKingdomEvents->next;
+		textBox11->Text = gcnew String(std::to_string(firstKingdomEvents->event.year).c_str());
+		textBox12->Text = gcnew String(firstKingdomEvents->event.name.c_str());
+		textBox13->Text = gcnew String(firstKingdomEvents->event.description.c_str());
 	}
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (isAdmin == false) {
 
-			EVENT_LIST* secondKingdomEvents = getSecondKingdomEvents();
-			textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
-			textBox5->ReadOnly = true;
-			textBox6->Text = gcnew String(secondKingdomEvents->event.name.c_str());
-			textBox6->ReadOnly = true;
-			textBox7->Text = gcnew String(secondKingdomEvents->event.description.c_str());
-			textBox7->ReadOnly = true;
+		EVENT_LIST* secondKingdomEvents = getSecondKingdomEvents();
+		textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+		textBox6->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+		textBox7->Text = gcnew String(secondKingdomEvents->event.description.c_str());
 
-			secondKingdomEvents = secondKingdomEvents->next;
-			textBox8->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
-			textBox8->ReadOnly = true;
-			textBox9->Text = gcnew String(secondKingdomEvents->event.name.c_str());
-			textBox9->ReadOnly = true;
-			textBox10->Text = gcnew String(secondKingdomEvents->event.description.c_str());
-			textBox10->ReadOnly = true;
+		secondKingdomEvents = secondKingdomEvents->next;
+		textBox8->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+		textBox9->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+		textBox10->Text = gcnew String(secondKingdomEvents->event.description.c_str());
 
-			secondKingdomEvents = secondKingdomEvents->next;
-			textBox11->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
-			textBox11->ReadOnly = true;
-			textBox12->Text = gcnew String(secondKingdomEvents->event.name.c_str());
-			textBox12->ReadOnly = true;
-			textBox13->Text = gcnew String(secondKingdomEvents->event.description.c_str());
-			textBox13->ReadOnly = true;
-		}
-		else {
-			textBox5->Show();
-			textBox6->Show();
-			textBox7->Show();
-			textBox8->Show();
-			textBox9->Show();
-			textBox10->Show();
-			textBox11->Show();
-			textBox12->Show();
-			textBox13->Show();
-
-			EVENT_LIST* secondKingdomEvents = getSecondKingdomEvents();
-			textBox5->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
-			textBox6->Text = gcnew String(secondKingdomEvents->event.name.c_str());
-			textBox7->Text = gcnew String(secondKingdomEvents->event.description.c_str());
-
-			secondKingdomEvents = secondKingdomEvents->next;
-			textBox8->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
-			textBox9->Text = gcnew String(secondKingdomEvents->event.name.c_str());
-			textBox10->Text = gcnew String(secondKingdomEvents->event.description.c_str());
-
-			secondKingdomEvents = secondKingdomEvents->next;
-			textBox11->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
-			textBox12->Text = gcnew String(secondKingdomEvents->event.name.c_str());
-			textBox13->Text = gcnew String(secondKingdomEvents->event.description.c_str());
-		}
+		secondKingdomEvents = secondKingdomEvents->next;
+		textBox11->Text = gcnew String(std::to_string(secondKingdomEvents->event.year).c_str());
+		textBox12->Text = gcnew String(secondKingdomEvents->event.name.c_str());
+		textBox13->Text = gcnew String(secondKingdomEvents->event.description.c_str());
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1016,21 +942,6 @@ namespace AmigosQuiz {
 
 		button3->Hide();
 		button4->Show();
-
-		if (isAdmin == false)
-		{
-			label13->Hide();
-			label14->Hide();
-			label15->Hide();
-			ShowAdminTextBoxes();
-			isAdmin = true;
-		}
-		else
-		{
-			button3->Text = "Admin";
-			HideAdminTextBoxes();
-			isAdmin = false;
-		}
 	}
 
 	private: System::Void HideAdminTextBoxes()
