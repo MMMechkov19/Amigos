@@ -1209,6 +1209,7 @@ private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Boolean isQuizStarted = false;
 private: int answeredQuestions = 0;
 private: int correctAnswersCount = 0;
+private: int cn = 0;
 private: void removeChoice()
 {
 	radioButton1->Checked = false;
@@ -1234,10 +1235,11 @@ private: int getUserAnswerIndex()
 	{
 		return 3;
 	}
+	return 4;
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {	
-	if (isQuizStarted == false)
-	{
+ 	cn++;
+	
 		Point* newLocation = new Point(139, 422);
 		button5->Location = *newLocation;
 		ShowQuestion();
@@ -1249,9 +1251,11 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 		radioButton2->Text = gcnew String(questions->question.answers[1].c_str());
 		radioButton3->Text = gcnew String(questions->question.answers[2].c_str());
 		radioButton4->Text = gcnew String(questions->question.answers[3].c_str());
+		if (cn > 1)
+		{
 		static int size = getLinkedListSize(questions);
-		
-		if (questions->question.correctAnswerIndex == getUserAnswerIndex())
+		int index = getUserAnswerIndex();
+		if (questions->question.correctAnswerIndex == index)
 		{
 			label7->Text = gcnew String(std::to_string(correctAnswersCount++).c_str());
 		}

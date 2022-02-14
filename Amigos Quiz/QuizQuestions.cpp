@@ -23,6 +23,7 @@ QUESTION_LIST* getFirstKingdomQuestions() {
 		}
 		temp1 = temp1->next;
 	}
+	
 	return firstKingdomList;
 }
 
