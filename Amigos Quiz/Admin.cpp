@@ -42,6 +42,7 @@ EVENT_LIST* getSecondKingdomEvents() {
 	return secondKingdomList;
 }
 
+// Remove First Kingdom events
 void removeFirstKingdomEvents()
 {
 	EVENT_LIST* temp = events;
@@ -70,6 +71,7 @@ void removeFirstKingdomEvents()
 	return;
 }
 
+// Remove Second Kingdom events
 void removeSecondKingdomEvents()
 {
 	EVENT_LIST* temp = events;
