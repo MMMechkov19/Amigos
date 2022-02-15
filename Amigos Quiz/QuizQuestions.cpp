@@ -43,6 +43,7 @@ QUESTION_LIST* getSecondKingdomQuestions() {
 	return secondKingdomList;
 }
 
+// Function that returns the size of linked lists
 int getLinkedListSize(QUESTION_LIST* head)
 {
 	QUESTION_LIST* temp = head;

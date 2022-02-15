@@ -113,6 +113,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Label^ label21;
 	private: System::Windows::Forms::Label^ label22;
+	private: System::Windows::Forms::PictureBox^ pictureBox6;
 
 
 
@@ -193,6 +194,7 @@ namespace AmigosQuiz {
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -209,6 +211,7 @@ namespace AmigosQuiz {
 			this->panel4->SuspendLayout();
 			this->panel10->SuspendLayout();
 			this->panel11->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -876,6 +879,7 @@ namespace AmigosQuiz {
 			this->panel11->Controls->Add(this->label20);
 			this->panel11->Controls->Add(this->button5);
 			this->panel11->Controls->Add(this->label19);
+			this->panel11->Controls->Add(this->pictureBox6);
 			this->panel11->Location = System::Drawing::Point(346, 1);
 			this->panel11->Name = L"panel11";
 			this->panel11->Size = System::Drawing::Size(532, 524);
@@ -887,7 +891,7 @@ namespace AmigosQuiz {
 			this->label22->BackColor = System::Drawing::Color::Transparent;
 			this->label22->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->label22->Font = (gcnew System::Drawing::Font(L"Rockwell", 16.25F, System::Drawing::FontStyle::Bold));
-			this->label22->Location = System::Drawing::Point(159, 177);
+			this->label22->Location = System::Drawing::Point(89, 179);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(72, 27);
 			this->label22->TabIndex = 24;
@@ -979,7 +983,7 @@ namespace AmigosQuiz {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Rockwell", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button5->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button5->Location = System::Drawing::Point(139, 247);
+			this->button5->Location = System::Drawing::Point(135, 323);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(123, 36);
 			this->button5->TabIndex = 17;
@@ -992,12 +996,24 @@ namespace AmigosQuiz {
 			this->label19->AutoSize = true;
 			this->label19->BackColor = System::Drawing::Color::Transparent;
 			this->label19->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->label19->Font = (gcnew System::Drawing::Font(L"Rockwell", 16.25F, System::Drawing::FontStyle::Bold));
-			this->label19->Location = System::Drawing::Point(124, 22);
+			this->label19->Font = (gcnew System::Drawing::Font(L"Rockwell", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label19->Location = System::Drawing::Point(88, 79);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(153, 27);
+			this->label19->Size = System::Drawing::Size(226, 33);
 			this->label19->TabIndex = 6;
-			this->label19->Text = L"General Test";
+			this->label19->Text = L"GENERAL TEST";
+			// 
+			// pictureBox6
+			// 
+			this->pictureBox6->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
+			this->pictureBox6->Location = System::Drawing::Point(24, 61);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(343, 343);
+			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox6->TabIndex = 12;
+			this->pictureBox6->TabStop = false;
 			// 
 			// EventForm
 			// 
@@ -1036,6 +1052,7 @@ namespace AmigosQuiz {
 			this->panel10->PerformLayout();
 			this->panel11->ResumeLayout(false);
 			this->panel11->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1098,6 +1115,7 @@ namespace AmigosQuiz {
 		button4->Show();
 	}
 
+	// Function that turn off the readonly mode for textboxes
 	private: System::Void HideAdminTextBoxes()
 	{
 		textBox5->ReadOnly = true;
@@ -1110,7 +1128,8 @@ namespace AmigosQuiz {
 		textBox12->ReadOnly = true;
 		textBox13->ReadOnly = true;
 	}
-
+	
+	// Function that turn on the readonly mode for textboxes
 	private: System::Void ShowAdminTextBoxes()
 	{
 		textBox5->ReadOnly = false;
@@ -1123,6 +1142,8 @@ namespace AmigosQuiz {
 		textBox12->ReadOnly = false;
 		textBox13->ReadOnly = false;
 	}
+
+	// Function for showing question
 	private: System::Void ShowQuestion()
 	{
 		radioButton1->Show();
@@ -1131,6 +1152,8 @@ namespace AmigosQuiz {
 		radioButton4->Show();
 		label20->Show();		
 	}
+
+	// Function for hiding question
 	private: System::Void HideQuestion()
 	{
 		radioButton1->Hide();
@@ -1186,6 +1209,7 @@ namespace AmigosQuiz {
 		button4->Hide();
 	}
 private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
+	pictureBox6->Show();
 	panel11->Show();
 }
 private: System::Boolean isQuizStarted = false;
@@ -1199,6 +1223,8 @@ private: void removeChoice()
 	radioButton3->Checked = false;
 	radioButton4->Checked = false;
 }
+
+// Function that converts input from radio buttons into indexes	   
 private: int getUserAnswerIndex() 
 {
 	if (radioButton1->Checked == true)
@@ -1220,6 +1246,7 @@ private: int getUserAnswerIndex()
 	return 4;
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {	
+	pictureBox6->Hide();
 	cn++;
 	if (cn > 1)
 	{
