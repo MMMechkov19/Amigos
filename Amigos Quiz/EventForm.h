@@ -114,6 +114,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::Label^ label21;
 	private: System::Windows::Forms::Label^ label22;
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
+	private: System::Windows::Forms::Button^ button6;
 
 
 
@@ -195,6 +196,7 @@ namespace AmigosQuiz {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -870,6 +872,7 @@ namespace AmigosQuiz {
 			// panel11
 			// 
 			this->panel11->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel11.BackgroundImage")));
+			this->panel11->Controls->Add(this->button6);
 			this->panel11->Controls->Add(this->label22);
 			this->panel11->Controls->Add(this->label21);
 			this->panel11->Controls->Add(this->radioButton4);
@@ -1015,6 +1018,24 @@ namespace AmigosQuiz {
 			this->pictureBox6->TabIndex = 12;
 			this->pictureBox6->TabStop = false;
 			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
+				static_cast<System::Int32>(static_cast<System::Byte>(100)));
+			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button6->FlatAppearance->BorderSize = 0;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Rockwell", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->button6->Location = System::Drawing::Point(135, 422);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(123, 36);
+			this->button6->TabIndex = 25;
+			this->button6->Text = L"Back";
+			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &EventForm::button6_Click);
+			// 
 			// EventForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1072,6 +1093,7 @@ namespace AmigosQuiz {
 		initialiseQuestions();
 		label21->Hide(); 
 		label22->Hide();
+		button6->Hide();
 	}
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 		panel11->Hide();
@@ -1216,6 +1238,7 @@ private: System::Boolean isQuizStarted = false;
 private: int answeredQuestions = 0;
 private: int correctAnswersCount = 0;
 private: int cn = 0;
+private: bool isReatempt = false;
 private: void removeChoice()
 {
 	radioButton1->Checked = false;
@@ -1246,6 +1269,12 @@ private: int getUserAnswerIndex()
 	return 4;
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {	
+	static QUESTION_LIST* questions = getFirstKingdomQuestions();
+	if (isReatempt == true)
+	{
+		questions = getFirstKingdomQuestions();
+		isReatempt = false;
+	}
 	pictureBox6->Hide();
 	cn++;
 	if (cn > 1)
@@ -1255,7 +1284,7 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 		ShowQuestion();
 		button5->Text = "Next";
 		//isQuizStarted = true;
-		static QUESTION_LIST* questions = getFirstKingdomQuestions();	
+		
 		label20->Text = gcnew String(questions->question.question.c_str());
 		radioButton1->Text = gcnew String(questions->question.answers[0].c_str());
 		radioButton2->Text = gcnew String(questions->question.answers[1].c_str());
@@ -1288,10 +1317,27 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 			label22->Text = "Your score is: " + gcnew String(std::to_string(correctAnswersCount).c_str()) + "/" + gcnew String(std::to_string(size - 1).c_str());
 			button5->Hide();
 			label22->Show();
+			button6->Show();
 		}
 		answeredQuestions++;
 		removeChoice();
 	}
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	button6->Hide();
+	label21->Hide();
+	label22->Hide();
+	button5->Show();
+	label19->Show();
+	pictureBox6->Show();
+	Point* newLocation = new Point(135, 323);
+	button5->Location = *newLocation;
+	button5->Text = "Start Quiz";	
+	answeredQuestions = 0;
+	correctAnswersCount = 0;
+	cn = 0;
+	isReatempt = true;
+
 }
 };
 }
