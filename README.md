@@ -1,7 +1,16 @@
 <p>
   <a href=" rel="noopener">
-    <img src="Images/logo2Copy1.png" alt="Logo" width="900" height = "400">
+    <img src="Images/logo2Copy1.png" alt="Logo" width="900" height = "430">
   </a>
+</p>
+
+<h1 align = "center"> Time List Project </h1>
+
+<p align = "center">
+   <img src = "https://img.shields.io/github/languages/count/MMMechkov19/Amigos?style=flat">
+   <img src = "https://img.shields.io/github/repo-size/MMMechkov19/Amigos?style=flat">
+   <img src = "https://img.shields.io/github/stars/MMMechkov19/Amigos?style=social">
+   <img src = "https://img.shields.io/github/contributors/MMMechkov19/Amigos?style=flat">
 </p>
 
 ## 📝 Table of Contents
@@ -11,7 +20,13 @@
 - [Presentation and Documentation](#documentation)
 
 ## 📖 Description <a name="description"></a>
+<br>
+The main goal of our project is to present C++ History Application on the topic "Time list".
+<br>
 
+*	Awesome algorithm 
+*	Easy to use and styled UI
+*	Overall good execution
 
 ## 💻 Used technologies <a name="used_technologies"></a>
 - [Visual Studio](https://visualstudio.microsoft.com/) - Application
