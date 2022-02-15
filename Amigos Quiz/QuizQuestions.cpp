@@ -57,10 +57,14 @@ int getLinkedListSize(QUESTION_LIST* head)
 
 // Function for initializing events
 void initialiseQuestions() {
-	addQuestion({ 1,"Who lead the The battle of the Varbishki Pass?", {"Khan Asparuh","Tsar Samuil","Tsar Simeon","Khan Krum"}, 0, 1 });
-	addQuestion({ 2," Where is the Trajan's Gate?", {"Near Ihtiman","Near Thrace","Near Macedonia","Near Pliska"}, 0, 1 });
-	addQuestion({ 3,"In which year did Krum defeat Byzantium at the Varbish Pass?", {"831","814","811","809"}, 0, 1 });
+	addQuestion({ 1,"Who lead the The battle of \n      the Varbishki Pass?", {"Khan Asparuh","Tsar Samuil","Tsar Simeon","Khan Krum"}, 3, 1 });
+	addQuestion({ 2,"Where is the Trajan's Gate?", {"Near Ihtiman","Near Thrace","Near Macedonia","Near Pliska"}, 0, 1 });
+	addQuestion({ 3,"In which year did Krum defeat \nByzantium at the Varbish Pass?", {"831","814","811","809"}, 2, 1 });
 	addQuestion({ 4,"When is the The Battle of Kleidion?", {"29 July 1014","14 June 976","26 July 811","30 December 997"}, 0, 1 });
-	addQuestion({ 5,"How many soldiers are left with one eye to lead the 14,000 army?", {"Every 140 soldiers","Every 100 soldiers","Every 500 soldiers","Every 1000 soldiers"}, 0, 1 });
-	addQuestion({ 6,"Who blinds all 14,000 soldiers, leaving 1 in every 100 soldiers?", {"Basil II","Vladimir II","Konstantin VII","Nikifor II"}, 0, 1 });	
+	addQuestion({ 5,"How many soldiers are left with \none eye to lead the 14,000 army?", {"Every 140 soldiers","Every 100 soldiers","Every 500 soldiers","Every 1000 soldiers"}, 1, 1 });
+	addQuestion({ 6,"Who blinds all 14,000 soldiers, \nleaving 1 in every 100 soldiers?", {"Basil II","Vladimir II","Konstantin VII","Nikifor II"}, 0, 1 });
+	addQuestion({ 7,"In what year did the Asenevtsi \nuprising break out?", {"1018","1185","1207","1396"}, 1, 1 });
+	addQuestion({ 8,"Which Bulgarian ruler and when did \nhe fight the battle of Klokotnitsa?", {"Kaloyan - 1230","Ivan Asen I - 1235","Ivan Asen II - 1230","Kaloyan - 1235"}, 2, 1 });
+	addQuestion({ 9,"When was Vidin conquered?", {"1393","1369","1392","1396"}, 3, 1 });
+	addQuestion({ 10,"The Uprising led by?", {"Kaloyan and Peter","Ivailo and Asen","Konstantin VII","Asen and Peter"}, 3, 1 });
 }

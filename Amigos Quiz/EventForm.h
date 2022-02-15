@@ -71,7 +71,7 @@ namespace AmigosQuiz {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::Label^ label11;
+
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label9;
 
@@ -136,7 +136,6 @@ namespace AmigosQuiz {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -185,6 +184,7 @@ namespace AmigosQuiz {
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
+			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
@@ -193,7 +193,6 @@ namespace AmigosQuiz {
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -218,7 +217,6 @@ namespace AmigosQuiz {
 			this->panel1->Controls->Add(this->button4);
 			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->label12);
-			this->panel1->Controls->Add(this->label11);
 			this->panel1->Controls->Add(this->label10);
 			this->panel1->Controls->Add(this->label9);
 			this->panel1->Controls->Add(this->label8);
@@ -280,31 +278,17 @@ namespace AmigosQuiz {
 			this->label12->TabIndex = 9;
 			this->label12->Text = L"akaunt";
 			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->BackColor = System::Drawing::Color::Gainsboro;
-			this->label11->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->label11->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label11->Location = System::Drawing::Point(26, 353);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(263, 19);
-			this->label11->TabIndex = 8;
-			this->label11->Text = L"Second Bulgarian Kingdom Test";
-			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
 			this->label10->BackColor = System::Drawing::Color::Gainsboro;
 			this->label10->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(26, 229);
+			this->label10->Font = (gcnew System::Drawing::Font(L"Rockwell", 14, System::Drawing::FontStyle::Bold));
+			this->label10->Location = System::Drawing::Point(22, 277);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(244, 19);
+			this->label10->Size = System::Drawing::Size(133, 23);
 			this->label10->TabIndex = 7;
-			this->label10->Text = L"First Bulgarian Kingdom Test";
+			this->label10->Text = L"General Test";
 			this->label10->Click += gcnew System::EventHandler(this, &EventForm::label10_Click);
 			// 
 			// label9
@@ -312,11 +296,10 @@ namespace AmigosQuiz {
 			this->label9->AutoSize = true;
 			this->label9->BackColor = System::Drawing::Color::Transparent;
 			this->label9->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(22, 308);
+			this->label9->Font = (gcnew System::Drawing::Font(L"Rockwell", 13, System::Drawing::FontStyle::Bold));
+			this->label9->Location = System::Drawing::Point(22, 228);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(283, 19);
+			this->label9->Size = System::Drawing::Size(317, 22);
 			this->label9->TabIndex = 6;
 			this->label9->Text = L"Second Bulgarian Kingdom Lesson";
 			this->label9->Click += gcnew System::EventHandler(this, &EventForm::label9_Click);
@@ -326,11 +309,10 @@ namespace AmigosQuiz {
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->label8->Font = (gcnew System::Drawing::Font(L"Rockwell", 13, System::Drawing::FontStyle::Bold));
 			this->label8->Location = System::Drawing::Point(22, 185);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(264, 19);
+			this->label8->Size = System::Drawing::Size(296, 22);
 			this->label8->TabIndex = 5;
 			this->label8->Text = L"First Bulgarian Kingdom Lesson";
 			this->label8->Click += gcnew System::EventHandler(this, &EventForm::label8_Click);
@@ -899,6 +881,18 @@ namespace AmigosQuiz {
 			this->panel11->Size = System::Drawing::Size(532, 524);
 			this->panel11->TabIndex = 11;
 			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->BackColor = System::Drawing::Color::Transparent;
+			this->label22->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->label22->Font = (gcnew System::Drawing::Font(L"Rockwell", 16.25F, System::Drawing::FontStyle::Bold));
+			this->label22->Location = System::Drawing::Point(159, 177);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(72, 27);
+			this->label22->TabIndex = 24;
+			this->label22->Text = L"finish";
+			// 
 			// label21
 			// 
 			this->label21->AutoSize = true;
@@ -916,7 +910,7 @@ namespace AmigosQuiz {
 			this->radioButton4->AutoSize = true;
 			this->radioButton4->BackColor = System::Drawing::Color::Transparent;
 			this->radioButton4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->radioButton4->Location = System::Drawing::Point(245, 244);
+			this->radioButton4->Location = System::Drawing::Point(245, 262);
 			this->radioButton4->Name = L"radioButton4";
 			this->radioButton4->Size = System::Drawing::Size(101, 20);
 			this->radioButton4->TabIndex = 22;
@@ -929,7 +923,7 @@ namespace AmigosQuiz {
 			this->radioButton3->AutoSize = true;
 			this->radioButton3->BackColor = System::Drawing::Color::Transparent;
 			this->radioButton3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->radioButton3->Location = System::Drawing::Point(245, 209);
+			this->radioButton3->Location = System::Drawing::Point(245, 229);
 			this->radioButton3->Name = L"radioButton3";
 			this->radioButton3->Size = System::Drawing::Size(101, 20);
 			this->radioButton3->TabIndex = 21;
@@ -942,7 +936,7 @@ namespace AmigosQuiz {
 			this->radioButton2->AutoSize = true;
 			this->radioButton2->BackColor = System::Drawing::Color::Transparent;
 			this->radioButton2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->radioButton2->Location = System::Drawing::Point(54, 242);
+			this->radioButton2->Location = System::Drawing::Point(54, 265);
 			this->radioButton2->Name = L"radioButton2";
 			this->radioButton2->Size = System::Drawing::Size(101, 20);
 			this->radioButton2->TabIndex = 20;
@@ -955,7 +949,7 @@ namespace AmigosQuiz {
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->BackColor = System::Drawing::Color::Transparent;
 			this->radioButton1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.25F));
-			this->radioButton1->Location = System::Drawing::Point(54, 209);
+			this->radioButton1->Location = System::Drawing::Point(54, 229);
 			this->radioButton1->Name = L"radioButton1";
 			this->radioButton1->Size = System::Drawing::Size(101, 20);
 			this->radioButton1->TabIndex = 19;
@@ -971,9 +965,9 @@ namespace AmigosQuiz {
 			this->label20->Font = (gcnew System::Drawing::Font(L"Rockwell", 15, System::Drawing::FontStyle::Bold));
 			this->label20->Location = System::Drawing::Point(32, 171);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(88, 24);
+			this->label20->Size = System::Drawing::Size(99, 24);
 			this->label20->TabIndex = 18;
-			this->label20->Text = L"vupros1";
+			this->label20->Text = L"Question";
 			// 
 			// button5
 			// 
@@ -999,23 +993,11 @@ namespace AmigosQuiz {
 			this->label19->BackColor = System::Drawing::Color::Transparent;
 			this->label19->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->label19->Font = (gcnew System::Drawing::Font(L"Rockwell", 16.25F, System::Drawing::FontStyle::Bold));
-			this->label19->Location = System::Drawing::Point(33, 25);
+			this->label19->Location = System::Drawing::Point(124, 22);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(332, 27);
+			this->label19->Size = System::Drawing::Size(153, 27);
 			this->label19->TabIndex = 6;
-			this->label19->Text = L"First Bulgarian Kingdom Test";
-			// 
-			// label22
-			// 
-			this->label22->AutoSize = true;
-			this->label22->BackColor = System::Drawing::Color::Transparent;
-			this->label22->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->label22->Font = (gcnew System::Drawing::Font(L"Rockwell", 16.25F, System::Drawing::FontStyle::Bold));
-			this->label22->Location = System::Drawing::Point(159, 177);
-			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(72, 27);
-			this->label22->TabIndex = 24;
-			this->label22->Text = L"finish";
+			this->label19->Text = L"General Test";
 			// 
 			// EventForm
 			// 
@@ -1026,7 +1008,7 @@ namespace AmigosQuiz {
 			this->Controls->Add(this->panel10);
 			this->Controls->Add(this->panel1);
 			this->Name = L"EventForm";
-			this->Text = L"EventForm";
+			this->Text = L"s";
 			this->Load += gcnew System::EventHandler(this, &EventForm::EventForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
@@ -1238,37 +1220,45 @@ private: int getUserAnswerIndex()
 	return 4;
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {	
- 	cn++;
-	
+	cn++;
+	if (cn > 1)
+	{
 		Point* newLocation = new Point(139, 422);
-		button5->Location = *newLocation;
+		button5->Location = *newLocation;		
 		ShowQuestion();
 		button5->Text = "Next";
 		//isQuizStarted = true;
-		static QUESTION_LIST* questions = getFirstKingdomQuestions();
+		static QUESTION_LIST* questions = getFirstKingdomQuestions();	
 		label20->Text = gcnew String(questions->question.question.c_str());
 		radioButton1->Text = gcnew String(questions->question.answers[0].c_str());
 		radioButton2->Text = gcnew String(questions->question.answers[1].c_str());
 		radioButton3->Text = gcnew String(questions->question.answers[2].c_str());
 		radioButton4->Text = gcnew String(questions->question.answers[3].c_str());
-		if (cn > 1)
-		{
 		static int size = getLinkedListSize(questions);
 		int index = getUserAnswerIndex();
-		if (questions->question.correctAnswerIndex == index)
+		if (index == 4)
 		{
-			label7->Text = gcnew String(std::to_string(correctAnswersCount++).c_str());
+			return;
 		}
-		if (answeredQuestions < size-1)
+ 		if (questions->question.correctAnswerIndex == index)
+		{
+			correctAnswersCount++;
+		}
+		if (answeredQuestions < size - 2)
 		{
 			questions = questions->next;
+			label20->Text = gcnew String(questions->question.question.c_str()); 
+			radioButton1->Text = gcnew String(questions->question.answers[0].c_str());
+			radioButton2->Text = gcnew String(questions->question.answers[1].c_str());
+			radioButton3->Text = gcnew String(questions->question.answers[2].c_str());
+			radioButton4->Text = gcnew String(questions->question.answers[3].c_str());
 		}
 		else
 		{
 			label21->Text = "Finish";
 			HideQuestion();
 			label21->Show();
-			label22->Text = "Your score is: " + gcnew String (std::to_string(correctAnswersCount).c_str()) + "/" + gcnew String (std::to_string(size-1).c_str());
+			label22->Text = "Your score is: " + gcnew String(std::to_string(correctAnswersCount).c_str()) + "/" + gcnew String(std::to_string(size - 1).c_str());
 			button5->Hide();
 			label22->Show();
 		}
