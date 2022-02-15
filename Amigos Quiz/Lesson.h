@@ -283,6 +283,5 @@ namespace AmigosQuiz {
 
 		}
 #pragma endregion
-
-	};
+};
 }
