@@ -4,8 +4,6 @@
   </a>
 </p>
 
-<h1 align = "center"> Time List Project </h1>
-
 <p align = "center">
    <img src = "https://img.shields.io/github/languages/count/MMMechkov19/Amigos?style=flat">
    <img src = "https://img.shields.io/github/repo-size/MMMechkov19/Amigos?style=flat">
@@ -22,6 +20,7 @@
 ## 📖 Description <a name="description"></a>
 <br>
 The main goal of our project is to present C++ History Application on the topic "Time list".
+<br>
 <br>
 
 *	Awesome algorithm 
@@ -43,5 +42,6 @@ The main goal of our project is to present C++ History Application on the topic 
 - [Kristian Tsvetkov](https://github.com/KPTsvetkov19) - QA Engineer
 
 ## 📋 Presentation and Documentation <a name="documentation"></a>
-+ [Documentation](https://github.com/MMMechkov19/Untitled/blob/main/Documents/Documentation/Untitled-Documentation.docx)
-+ [Presentation](https://github.com/MMMechkov19/Untitled/tree/main/Documents/Presentation)
++ [Presentation](https://github.com/MMMechkov19/Amigos/blob/main/Documents/Presentation.pptx)
++ [Documentation](https://github.com/MMMechkov19/Amigos/blob/main/Documents/Documentation.docx)
++ [QA Documentation](https://github.com/MMMechkov19/Amigos/blob/main/Documents/QA%20Documentation.xlsx)
